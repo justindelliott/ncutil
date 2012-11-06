@@ -1,0 +1,142 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  Locations and Services</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>Locations and Services</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			Today's computers typically have more than one network interface associated with them:  my PowerBook G4 has a 56k modem, built-in ethernet, AirPort wireless card, and Bluetooth modem capability.  And the fact that the computer in question is a laptop implies that I may need to have configuration information available for many different locales.<BR>
+			<BR>
+			The SystemConfiguration framework and the <TT>configd</TT> daemon that run on every Darwin-based host make it easy to juggle all these interfaces and a myriad of configurations.  A <I>network service</I> consists of a reference to the network interface it configures and properties to setup each protocol that run atop that interface.  For example, Listing 8 shows the contents of a network service that is associated with the built-in ethernet interface:
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 8:  A Built-in Ethernet network service.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ list 9
+drw 10    Built-in Ethernet                       Interface
+drw 11    Proxies                                 Protocol
+drw 12    AppleTalk                               Protocol
+drw 13    IPv4                                    Protocol
+drw 14    DNS                                     Protocol
+drw 15    IPv6                                    Protocol
+	</TD></TR>
+</TABLE>
+			Here we see that the Built-in Ethernet interface is used by the network service and protocol configuration entities for AppleTalk, IP version 4 and 6, DNS, and proxy server settings are all present.<BR>
+			<BR>
+			A <I>location</I> (also called a <I>network set</I>) contains multiple network services, one for each available network interface, typically.  Of course, one can remove or add network services to a location:  if no network services exist for a particular interface then that interface simply is not configured when that location is in-use.  If in the context of a location multiple network services exist for a single interface, then the <I>service order</I> for that location determines in what sequence each network service will be consulted in order to get the network interface transmitting.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 9:  The name and service order for the <B>Office</B> location.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ read 7
+-rw       name = Office
+-rw       service-order = {
+            Built-in Ethernet
+            DHCP
+            Built-in FireWire
+            Internal Modem
+            Bluetooth
+            AirPort
+          }
+	</TD></TR>
+</TABLE>
+			In this case, there are two network services associated with the built-in ethernet interface:  the first (<TT>Built-in Ethernet</TT>) uses a static IP address while the second (<TT>DHCP</TT>) requests an address from a DHCP server.  If the interface were to fail to come up with the first service's static address, the second service would be tried.<BR>
+			<BR>
+			Let us see how locations and network services are created and removed using <TT>ncutil</TT>.<BR>
+			<BR>
+			<HR>
+			<BLOCKQUOTE>
+				<H4>Creating a Location</H4>
+				Each location must have a unique name to identify it to the user, so first choose a name for the new location (you can modify the name later, too).  We will create a new location called <B>At Home</B>.  The command to create this new location is quite simple:
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 10:  Creating and examining the <B>At Home</B> location.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ create-location "At Home"
+[0 ]$ ls
+dr- 1     Interfaces                              Directory
+drw 7     Office                                  Location
+drw 45    On the Road                             Location
+drw 90    At Home                                 Location
+[0 ]$ ls 90
+drw 91    NetInfo                                 Global NetInfo
+drw 92    Internal Modem                          Service
+drw 99    Bluetooth                               Service
+drw 106   Built-in Ethernet                       Service
+drw 113   Built-in FireWire                       Service
+drw 119   AirPort                                 Service
+	</TD></TR>
+</TABLE>
+				The new location is automatically populated with one network service for each available network interface.<BR>
+				<BR>
+				<HR>
+				<H4>Creating a Network Service</H4>
+				Having configured all of the network services in the <B>At Home</B> location (in a flurry of commands not cited here) we shall now add another network service to use DHCP to configure the built-in ethernet interface.  As with locations, each network service within a location should have a unique name associated with it:  we will call the new service <B>DHCP</B>.  Listing the <TT CLASS="Command">/Interfaces</TT> directory, we find that the built-in ethernet template resides at directory ID 4 (or <TT CLASS="Command">/Interfaces/Built-in Ethernet</TT>).  The location to which you wish to add the new service must be the first argument to the command; the network interface template directory is the second argument; and the name for the service is the third.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 11:  Creating and examining the <B>DHCP</B> service.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ create-service 90 4 DHCP
+[0 ]$ ls 90
+drw 91    NetInfo                                 Global NetInfo
+drw 92    Internal Modem                          Service
+drw 99    Bluetooth                               Service
+drw 106   Built-in Ethernet                       Service
+drw 113   Built-in FireWire                       Service
+drw 119   AirPort                                 Service
+drw 127   DHCP                                    Service
+[0 ]$ ls 127
+drw 128   Built-in Ethernet                       Interface
+drw 129   IPv4                                    Protocol
+drw 130   DNS                                     Protocol
+drw 131   IPv6                                    Protocol
+drw 132   AppleTalk                               Protocol
+drw 133   Proxies                                 Protocol
+	</TD></TR>
+</TABLE>
+				In the next chapter we will configure this new network service, but for now, let us move on to removing services and locations.<BR>
+				<BR>
+				<HR>
+				<H4>Removing a Network Service</H4>
+				To remove a network service, make note of its directory ID or path and then issue the <TT CLASS="Command">destroy-service {directory}</TT> command.  That's it.<BR>
+				<BR>
+				<HR>
+				<H4>Removing a Location</H4>
+				You cannot remove the current location, so first and foremost the current location must be switched if this is the case.  The name of the current location is a property of the root directory.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 12:  Determining the current location.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ readprop 0 current-location
+Office
+	</TD></TR>
+</TABLE>
+				A location is removed using the <TT CLASS="Command">destroy-location {directory}</TT> command, where the directory is the directory ID or path of the location to be removed.
+
+			</BLOCKQUOTE>
+		
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint"><A HREF="TheDirectoryTree.html">Previous Chapter</A></FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint"><A HREF="PPPoEServices.html">Next Chapter</A></FONT></TD>
+			</TR></TABLE>
+		
+		</BLOCKQUOTE>
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

@@ -1,0 +1,131 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  Configuring a Service</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>Configuring a Service</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			As seen in previous chapters, a network service has <I>interface</I> and <I>protocol</I> subdirectories associated with it.  The interface subdirectory structure may be layered (PPP over a modem or ethernet, for example).  The protocol subdirectories represent all those protocols that will function over the interface in question.  All of these subdirectories have properties -- key and value combinations -- that provide the necessary configuration information.<BR>
+			<BR>
+			How does one know what properties may be assigned to a particular interface or protocol directory?  <TT>ncutil</TT> includes a command that summarizes all of the properties for a directory by key and value type.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 15:  The <B>DHCP</B> network service and the property summary for its interface.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ cd 127
+[127 DHCP]$ ls
+drw 128   Built-in Ethernet                       Interface
+drw 129   IPv4                                    Protocol
+drw 130   DNS                                     Protocol
+drw 131   IPv6                                    Protocol
+drw 132   AppleTalk                               Protocol
+drw 133   Proxies                                 Protocol
+[127 DHCP]$ propsummary 128
+-r-       (String) bsd-device
+-rw       (Boolean) inactive
+-r-       (String Array) layerable-interfaces
+-r-       (MAC Address) mac-address
+-rw       (String Array) media-options
+-rw       (String Enumeration) media-sub-type =  [ 100baseTX | none | 10baseT/UTP | autoselect ]
+-rw       (Ranged Integer) mtu =  [ 72 , 1500 ]
+[127 DHCP]$ propsummary 129
+-rw       (IPv4 Address Array) broadcast-address
+-rw       (IPv4 Address Array) destination-address
+-rw       (String) dhcp-client-id
+-rw       (Boolean) inactive
+-rw       (IPv4 Address Array) ip-address
+-rw       (String Enumeration) method =  [ BOOTP | DHCP | INFORM | LinkLocal | Manual | PPP ]
+-rw       (IPv4 Address) router
+-rw       (IPv4 Address Array) subnet-mask
+	</TD></TR>
+</TABLE>
+			Listing 15 shows that the Built-in Ethernet interface associated with the <B>DHCP</B> network service has some additional properties associated with it, relative to the properties we saw in its interface template.  In particular, the transmission mode, maximum transmission unit, and transmission options are now exposed.<BR>
+			<BR>
+			When any network service is created, its interface and protocol directories are populated with default properties and values.  To view all of the property keys and values associated with a directory, the <TT CLASS="Command">read</TT> command is used; if no directory ID or path is specified, then the current directory is assumed.  If, however, only the value of a particular property is desired, the <TT CLASS="Command">readprop</TT> command is available.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 16:  Using <TT>read</TT> and <TT>readprop</TT>.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[127 DHCP]$ read 129
+-rw       method = DHCP
+[127 DHCP]$ readprop 129 method
+DHCP
+[127 DHCP]$ setprop 129 dhcp-client-id Verizon
+[127 DHCP]$ read 129
+-rw       dhcp-client-id = Verizon
+-rw       method = DHCP
+[127 DHCP]$ readprop 129 method dhcp-client-id
+DHCP
+Verizon
+	</TD></TR>
+</TABLE>
+			Multiple property keys may be used with the <TT CLASS="Command">readprop</TT> command.  In Listing 16 the <TT CLASS="Command">setprop</TT> command is displayed, as well.  This command is used to assign a new value to a property, removing any existing value in the process.  For properties that take arrays of values, the entire set of values would be replaced by this command.  If the user wishes to add values to an existing array-based property, the <TT CLASS="Command">addval</TT> command would be more appropriate.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 17:  Adding subnet masks to the IPv4 protocol.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[127 DHCP]$ setprop 129 subnet-mask 255.0.0.0
+[127 DHCP]$ addval 129 subnet-mask 255.255.0.0
+[127 DHCP]$ read 129
+-rw       dhcp-client-id = Verizon
+-rw       method = DHCP
+-rw       subnet-mask = {
+            255.0.0.0
+            255.255.0.0
+          }
+[127 DHCP]$ setprop 129 subnet-mask 255.255.255.0 255.25.0.0 255.0.0.0
+[127 DHCP]$ read 129
+-rw       dhcp-client-id = Verizon
+-rw       method = DHCP
+-rw       subnet-mask = {
+            255.255.255.0
+            255.25.0.0
+            255.0.0.0
+          }
+	</TD></TR>
+</TABLE>
+			As Listing 17 shows, <TT CLASS="Command">setprop</TT> completely resets the value of the property.  The <TT CLASS="Command">addval</TT> command will accept multiple values, too.  The subnet mask "<TT>255.25.0.0</TT>" was entered incorrectly (missed a <TT>5</TT> in the second byte!) so we need to remove that value and add the appropriate value:
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 18:  Removing a value from an array-based property.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[127 DHCP]$ destroyval 129 subnet-mask 255.25.0.0
+[127 DHCP]$ addval 129 subnet-mask 255.255.0.0
+[127 DHCP]$ read 129
+-rw       dhcp-client-id = Verizon
+-rw       method = DHCP
+-rw       subnet-mask = {
+            255.255.255.0
+            255.0.0.0
+            255.255.0.0
+          }
+	</TD></TR>
+</TABLE>
+			The <TT CLASS="Command">destroyval</TT> command accepts multiple values for removal; if you remove all values from a property, the property is removed from the directory entirely (in other words, no empty arrays will hang around).  A property can be removed completely by using the <TT CLASS="Command">destroyprop</TT> command, rather than by removing all its values.
+
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint"><A HREF="PPPoEServices.html">Previous Chapter</A></FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint"><A HREF="PseudoShellMode.html">Next Chapter</A></FONT></TD>
+			</TR></TABLE>
+
+		</BLOCKQUOTE>
+		
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

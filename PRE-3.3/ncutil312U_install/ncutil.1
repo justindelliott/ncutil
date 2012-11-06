@@ -1,0 +1,188 @@
+.Dd Thu Jun 23 2005
+.Dt ncutil 1
+.Os Darwin
+.Sh NAME
+.Nm ncutil
+.Nd Darwin Network Configuration Utility 3.1.1
+.Sh SYNOPSIS
+.Nm
+.Op Fl options
+.Ar command
+.Ar path
+.Op ...
+.Sh DESCRIPTION
+Apple provides a network setup control panel with Mac OS X, but the open-source Darwin project has no such utility.  While it is possible to use standard UNIX flat files to configure the network settings under Darwin, that OS also uses the
+.Ar SystemConfiguration
+framework to maintain the networking parameters.  The Apple network control panel for Mac OS X uses the SystemConfiguration APIs to modify those preferences; 
+.Nm
+was designed to do the same from a command-line interface.
+.Pp
+A SERVICE is a complete set of parameters that configure a single network interface:  an IP address, gateway address, DNS server addresses, proxy parameters, etc form a complete configuration of an ethernet card, for instance.  Services exist for ethernet, modem, FireWire, and wireless ports.  Services are grouped into LOCATIONS.  A location contains one or more services, ranked in order of precedence: as ports come up or go down, alternate services may be configured in an attempt to keep network service uninterrupted.
+.Pp
+.Nm
+behaves much like Apple's NetInfo command line utility, niutil, and the preferences are presented in the form of a directory tree.  Preference entities are specified by directory IDs (numerical values assigned to each directory by
+.Nm
+) or by paths.  The program in pseudo-shell mode maintains a current directory, which may be indicated using the '.' character.  The '!' character references the directory last accessed by any command.  You may use '..' and '.' directory entities to reference parent and current directories, respectively.  In the context of some commands, the target directory may be an optional parameter, in which case the current directory is assumed.
+.Pp
+The user must have root privileges if the changes he/she makes are to be committed to the preference store and/or applied.
+.Sh OPTIONS
+.Bl -tag -width -indent
+.It Fl -apply-on-exit
+Any user-modification of the SystemConfiguration preferences tree by means of
+.Nm
+commands will not be noticed by the operating system immediately and applied to the host's network state.
+.It Fl p Ar path
+.It Fl -prefpath Ar path
+Forces
+.Nm
+to work with a preference tree located in an alternate file location.  The default is /Library/Preferences/SystemConfiguration/preferences.xml.  Alternately, the 'ncutil_prefpath' environment variable may be used.  You should always supply an absolute path.
+.Pp
+Note that when you use this command-line option ALL properties in the preference tree are unlocked -- including MAC addresses.
+.It Fl stdin
+Specifies that a series of commands will be taken, one per line, from standard input.  Each time
+.Nm
+is invoked there is a small amount of overhead in opening a connection to the configd daemon and setting up the preference directory.  Using this flag turns
+.Nm
+into a pseudo-shell and avoids the additional overhead incurred when invoking
+.Nm
+once per command.  Note that if no command is supplied on the command line, the program by defaults enters this mode.  Incoming text may make use of the C line-continuation character (\\) to concatenate lines.
+.It Fl D
+.It Fl -debug
+Engages additional output during program execution, mainly of the debugging persuasion
+.It Fl H
+.It Fl -hex-passwords
+Password properties are expected in hexadecimal form (possibly prefixed by a '0x')
+.It Fl -text-passwords
+Password properties are expected in textual form
+.It Fl -die-on-syntax-errors
+Any error whatsoever will cause the program to immediately terminate.  Without this flag, general errors in syntax, etc, do not cause the utility to exit
+.It Fl -disable-ANSI-text
+Any ANSI formatting embedded in the program's output will be discarded
+.It Fl P Ar string
+.It Fl -path-separator Ar string
+Modifies the series of characters used to delimit directories in an
+.Nm
+path.  By default the forward slash '/' is used.
+.It Fl R
+.It Fl -recursive-listing
+List the contents of an
+.Nm
+directory recursively.
+.El
+.Sh COMMANDS
+.Bl -tag -width -indent
+.It help
+Displays a help screen with a summary of commands and options.
+.It version
+Displays information such as build date/time and program and framework version numbers.
+.It enable | disable Op directory
+Some directories (network services, for example) can be marked as enabled or disabled.  If disabled, SystemConfiguration will not attempt to use that item when configuring a network port.  Disabling a service, for example, implies that the SystemConfiguration runtime system will not attempt to use that service at all.  On a machine where you want a network setup that does not make use of the modem, you disable the modem by disabling its service in a location.
+.It create-location Ar name
+Creates a new location which contains a service for each available network port.
+.It destroy-location Op location-directory
+Deletes an existing location.  All services associated with the location are removed.
+.It create-service Ar location-directory Ar interface-template Ar service-name
+Adds a new network service to the given location using the specified interface template.  The service name you provide must be unique within the specified location.
+.It destroy-service Op directory
+Removes the specified service from its parent location.
+.It push-interface Ar service-directory Ar interface-type
+Adds another network interface on top of a service's existing interface.  Viable interface types may be determined by using the propsummary command on the service's top-level interface directory.  Note that this operation cannot be reversed.  Mainly useful for turning an ethernet service into a PPPoE service.
+.It list | ls Op directory
+Attempts to list the sub-paths associated with the specified
+.Ar directory
+in the preferences tree.  Sub-directories of the root path (/) are locations; sub-directories of a location are services; sub-directories of a service are interfaces and protocols.
+.It propsummary Op directory
+Displays a table summarizing all of the properties available for the given
+.Ar directory
+, the type of data associated with each property, and (for enumerations) the possible values which the property may take.
+.It read Op directory
+Displays the properties and their values that exist at the preference tree
+.Ar directory
+given by the user.
+.It readprop Ar directory Ar propkey
+Given a property tag
+.Ar propkey
+and a directory within the preferences tree (
+.Ar directory
+) the program will attempt to display only the value(s) associated with that property.
+.It setprop Ar directory Ar propkey Ar value1 Op value2 ...
+Given a property tag
+.Ar propkey
+and a path within the preferences tree (
+.Ar directory
+) the program will attempt to associate the new value (or values) with that property.  The exact nature of
+.Ar value
+depends upon the property being set:  strings, numbers, IP addresses, and arrays are all possible data structures within the tree.
+.It destroyprop Ar directory Ar propkey1 Op propkey2 ...
+Given a property tag
+.Ar propkey
+and a path within the preferences tree (
+.Ar directory
+) the program will attempt to remove the specified property (or properties).
+.It addval Ar directory Ar propkey Ar value1 Op value2 ...
+Given a property tag
+.Ar propkey
+and a path within the preferences tree (
+.Ar directory
+) the program will attempt to add a new value (or values) to the property at the specified path.  This command will only work on properties that explicitly can accept more than one value.
+.It destroyval Ar directory Ar propkey Ar value1 Op value2 ...
+Given a property tag
+.Ar propkey
+and a path within the preferences tree (
+.Ar directory
+) the program will attempt to remove an existing value (or values) from the property at the specified path.  This command will only work on properties that explicitly can accept more than one value.
+.El
+.Pp
+Some commands are only useful when
+.Nm
+is run in pseudo-shell mode.
+.Bl -tag -width -indent
+.It chdir | cd Op directory
+Make
+.Ar directory
+the current directory.
+.It pwd
+Prints the path of the current directory.
+.It commit Op directory
+Commits the properties associated with the specified directory to the preference store the program is accessing.
+.It refresh Op directory
+Discards any modifications that have been made to the properties for the specified directory.
+.It apply-changes
+Commits all modifications to the preferences and applies them immediately.
+.It set-options
+Used to simply pass command options to the program without actually executing a command.
+.It exit | quit
+Causes the program to exit if it is running in pseudo-shell mode.
+.El
+.Pp
+All of the commands and options are also summarized by giving
+.Nm
+on the command line with the 'help' command.
+.Sh ENVIRONMENT
+.Bl -tag -width -indent
+.It ncutil_prefpath
+If many calls to
+.Nm
+will be made using the same alternate preference tree file path, then you may wish to consider setting this environment variable.  The program will use the content of this variable as the path to the preference file.  If this environment variable is not set the SystemConfiguration framework's default preference file will be used.
+.Pp
+Note that when you set this variable ALL properties in the preference tree are unlocked -- including MAC addresses.
+.El
+.Sh RETURN VALUES
+At the most basic level, any non-zero return value represents an error.  For scripting, etc, the program has a wide variety of error codes that are returned and can be found in NCError.h and NCApplication.h.  Error messages are displayed accordingly during program execution, as well.
+.Sh FRAMEWORKS
+Starting with version 2.0 of the ncutil program a large amount of the core code for working with the SystemConfiguration preference store has been bundled into a framework which other programmers may find useful.  The NCUtilFoundation framework must be installed in one of the standard locations for frameworks:  /Library/Frameworks or ~/Library/Frameworks.  It is not suggested that you install the framework in /System/Library/Frameworks.
+.Sh SEE ALSO 
+.Xr niutil 1
+.Sh HISTORY
+.Bl -tag -width -indent
+.It 3.0
+Original release, June 2005.
+.El
+.Sh AUTHORS
+The
+.Nm
+program is written, documented, and supported by Jeffrey Frey.  Please direct all comments, suggestions, and bugs to him via email at frey@chem.udel.edu.  The
+.Nm
+website can be found at:
+.Pp
+http://deaddog.duch.udel.edu/~frey/programming/ncutil/

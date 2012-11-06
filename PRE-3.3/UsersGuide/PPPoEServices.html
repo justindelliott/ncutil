@@ -1,0 +1,86 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  A PPPoE Network Service</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>A PPPoE Network Service</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			Creating a network service that layers PPP over top of an ethernet interface is accomplished through two steps.  First, a network service for the ethernet interface must be created.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 13:  Creating and examining a new ethernet service.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ create-service 90 4 PPPoE
+[0 ]$ ls 90
+drw 91    NetInfo                                 Global NetInfo
+drw 92    Internal Modem                          Service
+drw 99    Bluetooth                               Service
+drw 106   Built-in Ethernet                       Service
+drw 113   Built-in FireWire                       Service
+drw 119   AirPort                                 Service
+drw 127   DHCP                                    Service
+drw 134   PPPoE                                   Service
+[0 ]$ ls 134
+drw 135   Built-in Ethernet                       Interface
+drw 136   IPv4                                    Protocol
+drw 137   DNS                                     Protocol
+drw 138   IPv6                                    Protocol
+drw 139   AppleTalk                               Protocol
+drw 140   Proxies                                 Protocol
+[0 ]$ read 135
+-r-       bsd-device = en0
+-r-       layerable-interfaces = {
+            PPP
+          }
+-r-       mac-address = 00:0a:95:73:cb:38
+	</TD></TR>
+</TABLE>
+			Notice that the interface can have a <TT>PPP</TT> interface layered on top of it; this is exactly what is done to create a PPPoE service.  The command takes as its arguments the directory ID or path of the service to be modified and the name of the new interface layer (from the <TT>layerable-interfaces</TT> property displayed in Listing 13).
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 14:  Layering a PPP interface on top.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ push-interface 134 PPP
+[0 ]$ ls -R 134
+drw 141   PPP --> Built-in Ethernet               Interface
+drw 142   |-Built-in Ethernet                     Interface
+drw 136   IPv4                                    Protocol
+drw 137   DNS                                     Protocol
+drw 138   IPv6                                    Protocol
+drw 139   AppleTalk                               Protocol
+drw 140   Proxies                                 Protocol
+	</TD></TR>
+</TABLE>
+			The recursive directory listing shows that a PPP interface has been added on top of the existing Built-in Ethernet interface.  All of the configuration data necessary to initiate the PPPoE connection are properties of the <TT>PPP --> Built-in Ethernet</TT> directory (ID 141 here).<BR>
+			<BR>
+			<TABLE WIDTH="75%" ALIGN="CENTER" CLASS="Warning"><TR><TD>
+				<B>Warning!</B><BR>
+				<HR COLOR="#666600">
+				Once the PPP interface has been pushed on top of the Built-in Ethernet interface it cannot be removed.  The logic here is simple:  a PPPoE network service and a regular ethernet-type service are distinct enough to be considered two interface subclasses.  If the user needs a PPPoE network service, then its unlikely that the protocols, etc, for that service would apply to a standard ethernet service, anyway.
+			</TD></TR></TABLE>
+
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint"><A HREF="LocationsAndServices.html">Previous Chapter</A></FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint"><A HREF="ConfiguringAService.html">Next Chapter</A></FONT></TD>
+			</TR></TABLE>
+		
+		</BLOCKQUOTE>
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

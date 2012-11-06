@@ -1,0 +1,50 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>Table of Contents</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<TABLE WIDTH="90%" BORDER="0"><TR VALIGN="TOP">
+			<TD WIDTH="25%">
+				<B>Chapters:<B><BR>
+				<HR>
+				<OL>
+					<LI CLASS="TOC"><A HREF="Options.html">Option Flags</A></LI>
+					<LI CLASS="TOC"><A HREF="TheDirectoryTree.html">The Directory Tree</A></LI>
+					<LI CLASS="TOC"><A HREF="LocationsAndServices.html">Locations and Services</A></LI>
+					<LI CLASS="TOC"><A HREF="PPPoEServices.html">A PPPoE Network Service</A></LI>
+					<LI CLASS="TOC"><A HREF="ConfiguringAService.html">Configuring a Service</A></LI>
+					<LI CLASS="TOC"><A HREF="PseudoShellMode.html">Running as a Shell</A></LI>
+				</OL>
+			</TD>
+			<TD>
+				<I>From the <TT>ncutil</TT> man page:</I>
+				<BLOCKQUOTE>
+					Apple provides a network setup control panel with Mac OS X, but the open-source Darwin project has no such utility.  While it is possible to use standard UNIX flat files to configure the network settings under Darwin, that OS also uses the SystemConfiguration framework to maintain the networking parameters.  The Apple network control panel for Mac OS X uses the SystemConfiguration APIs to modify those preferences; <TT>ncutil</TT> was designed to do the same from a command-line interface.<BR>
+					<BR>
+					A <I>network service</I> is a complete set of parameters that configure a single network interface:  an IP address, gateway address, DNS server addresses, proxy parameters, etc form a complete configuration of an ethernet card, for instance.  Services exist for ethernet, modem, FireWire, and wireless ports.  Services are grouped into <I>locations</I>.  A location contains one or more services, ranked in order of precedence: as ports come up or go down, alternate services may be configured in an attempt to keep network service uninterrupted.<BR>
+					<BR>
+					<TT>ncutil</TT> behaves much like Apple's NetInfo command line utility, <TT>niutil</TT>, and the preferences are presented in the form of a directory tree.  Preference entities are specified by directory IDs (numerical values assigned to each directory by <TT>ncutil</TT>) or by paths.  The program in pseudo-shell mode maintains a current directory, which may be indicated using the '.' character.  The '!' character references the directory last accessed by any command.  You may use '..' and '.' directory entities to reference parent and current directories, respectively.  In the context of some commands, the target directory may be an optional parameter, in which case the current directory is assumed.<BR>
+					<BR>
+					The user must have root privileges if the changes he/she makes are to be committed to the preference store and/or applied.
+				</BLOCKQUOTE>
+			</TD>
+		</TR></TABLE>
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

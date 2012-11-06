@@ -1,0 +1,78 @@
+BODY {
+	margin:					0px;
+	padding:				0px;
+  background:			white;
+  color:					#02468A;
+  font-family:		"Lucide Grande",sans-serif;
+  font-size:			12px;
+  text-align:			justify;
+}
+A {
+  color:					#02468A;
+}
+H1 {
+	color:					white;
+	font-weight:		bold;
+  font-size:			18px;
+}
+H2 {
+	color:					white;
+	font-weight:		bold;
+  font-size:			16px;
+}
+H3 {
+	color:					white;
+	font-weight:		bold;
+  font-size:			14px;
+}
+H4 {
+	font-weight:		bold;
+  font-size:			12px;
+}
+FONT.SmallPrint {
+	color:					white;
+  font-size:			9px;
+}
+TT {
+	font-family:		Courier,monospace;
+}
+TT.Command {
+	background:			#CCDDDD;
+	font-family:		Courier,monospace;
+}
+TABLE {
+	padding-left:		10px;
+	padding-top:		10px;
+  color:					#02468A;
+  font-family:		"Lucide Grande",sans-serif;
+  font-size:			12px;
+}
+TD.Code {
+	white-space:		pre;
+	font-family:		Courier,monospace;
+	font-size:			10px;
+}
+OL {
+	margin:					 0px;
+	padding-left:		15px;
+}
+LI.TOC {
+	padding-bottom:  5px;
+}
+TABLE.Warning {
+	border:					3px solid #666600;
+	background:			#FFFF99;
+	color:					#666600;
+	padding:				2px;
+}
+TABLE.Command {
+	border:					3px solid #02468A;
+	padding:				2px;
+}
+TR.CommandHeader {
+	background:			#02468A;
+	color:					white;
+}
+TR.CommandAltRow {
+	background:			#CCDDDD;
+}

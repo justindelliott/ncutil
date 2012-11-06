@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# InstallationCheck
+#
+# Determine whether we're running on a new-enough Mac OS X.
+#
+
+majorRelease=`/usr/bin/uname -r | /usr/bin/sed 's/\.[0-9]\.[0-9]$//'`
+
+if [ "r$majorRelease" = "r8" ]; then
+  exit 0
+fi
+
+# Standard "can't install" message and cancel installation:
+exit 97

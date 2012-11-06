@@ -1,0 +1,87 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  Option Flags</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>Options Flags</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			The utility has several command-line options that alter its behavior.<BR>
+			<BR>
+			<TABLE CLASS="Command" CELLSPACING="0">
+				<TR CLASS="CommandHeader">
+					<TH WIDTH="40%">Option Flag</TH><TH>Explanation</TH>
+				</TR>
+				<TR>
+					<TD><TT>--recursive-listing<BR>-R</TT></TD>
+					<TD>
+						Useful only when the command is <TT>list</TT> or <TT>ls</TT> to list the contents of a directory; the listing is done in a deep fashion, so that the subdirectories of each directory are shown, as well, in recursive fashion.
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>--apply-on-exit</TT></TD>
+					<TD>
+						When <TT>ncutil</TT> finishes running, do not merely attempt to commit the changes that were made but also apply them (force <TT>configd</TT> to notice the changes and apply them to the network state of the machine).
+					</TD>
+				</TR>
+				<TR>
+					<TD><TT>--prefpath {filepath}<BR>-p {filepath}</TT></TD>
+					<TD>
+						Use a preference file located at some alternate path (rather than the system default).  The <TT>filepath</TT> MUST be canonical.<BR>
+						<BR>
+						Useful to edit preference files copied from other machines or to create new preference files.  Note that a when a new preference file is created a new location named <B>Default</B> is added immediately and made the current location for that file.  When you use this flag all properties will be editable -- so be careful!<BR>
+						<BR>
+						The <TT>ncutil_prefpath</TT> enviroment variable can be set with a (canonical) path, as well, to avoid having to enter the option with every <TT>ncutil</TT> run. 
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>--hex-passwords<BR>-H<BR>--text-passwords</TT></TD>
+					<TD>
+						Some wireless base stations may be configured to accept hexadecimal byte strings as passwords.  Use the <TT>--hex-passwords</TT> or <TT>-H</TT> flags to interpret passwords as hexadecimal byte strings rather than plain text.  Its antithesis, the <TT>--text-passwords</TT> flag, is enabled by default.
+					</TD>
+				</TR>
+				<TR>
+					<TD><TT>--die-on-syntax-errors</TT></TD>
+					<TD>
+						When run in pseudo-shell mode, <TT>ncutil</TT> will not exit unless an error is particularly nasty.  This flag specifies that ANY error should cause the program to exit.
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>--disable-ANSI-text</TT></TD>
+					<TD>
+						Normally, error messages, warnings, and the pseudo-shell prompt are output to the terminal using ANSI color and boldfacing sequences.  These sequences will show up as gibberish if the output is piped to a file or another program.  Use this flag to force the program to output only the text, without the ANSI formatting.
+					</TD>
+				</TR>
+				<TR>
+					<TD><TT>--path-separator-string {string}<BR>-P {string}</TT></TD>
+					<TD>
+						By default, directory paths within <TT>ncutil</TT> are formed with the '<TT>/</TT>' character as the separator string between components.  This flag is used to specify an alternate character string to be used as the path separator.  For example, if a location or network service name in a preference store used the '<TT>/</TT>' character, the path separator could be set to '<TT>::</TT>' instead; subsequent paths would look like '<TT>::Location::Service</TT>'.
+					</TD>
+				</TR>
+			</TABLE>
+
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint">&nsp;</FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint"><A HREF="TheDirectoryTree.html">Next Chapter</A></FONT></TD>
+			</TR></TABLE>
+
+		</BLOCKQUOTE>
+		
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

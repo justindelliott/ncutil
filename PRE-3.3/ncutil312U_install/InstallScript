@@ -1,0 +1,112 @@
+#!/usr/bin/perl
+#
+# Installs the ncutil framework and utility
+#
+# From the command line you may provide alternate paths for the
+# three components:
+#
+# -bin_path XXX       Directory path to where the utility (ncutil)
+#                     should be copied
+#
+# -framework_path XXX Directory path to where the framework
+#                     (NCUtilFoundation) should be copied
+#
+# -man_path XXX       Directory path to where the man page (ncutil.1)
+#                     should be copied
+#
+# e.g.
+#
+#  InstallScript -bin_path /usr/bin -framework_path ~/Library/Frameworks
+#
+# The script will determine for each item whether or not 'sudo' must be
+# used to perform the copy operation.
+#
+# 03.Jun.2005: Darwin 8.x.x support --> Darwin 7 version of package
+# 15.Jul.2005: Updated for ncutil 3, Universal Binary version
+#
+
+$bin_path = "";
+$framework_path = "";
+$man_path = "";
+
+$i = 0;
+$iMax = @ARGV;
+while ($i < $iMax) {
+  if (@ARGV[$i] eq "-bin_path") {
+    if (++$i < $iMax) {
+      $bin_path = @ARGV[$i];
+    }
+  } elsif (@ARGV[$i] eq "-framework_path") {
+    if (++$i < $iMax) {
+      $framework_path = @ARGV[$i];
+    }
+  } elsif (@ARGV[$i] eq "-man_path") {
+    if (++$i < $iMax) {
+      $man_path = @ARGV[$i];
+    }
+  } else {
+    printf("ERROR:  Unknown option '%s'\n",@ARGV[$i]);
+    exit;
+  }
+  $i++;
+}
+if (($bin_path eq "") || (! -d $bin_path)) {
+  $bin_path = "/usr/sbin";
+}
+if (($framework_path eq "") || (! -d $framework_path)) {
+  $framework_path = "/Library/Frameworks";
+}
+if (($man_path eq "") || (! -d $man_path)) {
+  $man_path = "/usr/share/man/man1";
+}
+
+print("NCUtilFoundation & ncutil installer for Darwin\n\nDarwin version ");
+
+$os_vers = `/usr/bin/uname -r`;
+$hw_type = `/usr/bin/uname -p`;
+chomp($os_vers);
+chomp($hw_type);
+
+printf("%s [%s] ",$os_vers,$hw_type);
+if ($os_vers =~ /^8/) {
+  $src_dir = "UniversalBinary";
+  print("(10.4 compatible)\n");
+} else {
+  print("\nUnsupported version of Darwin.\n");
+  exit(1);
+}
+
+if (-e "$src_dir" && -e "$src_dir/ncutil" && -e "$src_dir/NCUtilFoundation.framework.tar") {
+  printf("Installing from %s archive: \n\n",$src_dir);
+  print("                      ncutil  -->  $bin_path\n");
+  if ( -w $bin_path ) {
+    system("cp $src_dir/ncutil $bin_path");
+  } else {
+    system("sudo cp $src_dir/ncutil $bin_path");
+  }
+  print("  NCUtilFoundation.framework  -->  $framework_path\n");
+  if ( ! -e $framework_path ) {
+    @pathParts = split(/\//,$framework_path);
+    pop(@pathParts);
+    $altPath = join("/",@pathParts);
+    if ( -w $altPath ) {
+      system("mkdir -p $framework_path");
+      system("tar -C $framework_path -xf $src_dir/NCUtilFoundation.framework.tar");
+    } else {
+      system("sudo mkdir -p $framework_path");
+      system("sudo tar -C $framework_path -xf $src_dir/NCUtilFoundation.framework.tar");
+    }
+  } else {
+    system("sudo rm -r $framework_path/NCUtilFoundation.framework");
+    system("sudo tar -C $framework_path -xf $src_dir/NCUtilFoundation.framework.tar");
+  }
+  print("                    ncutil.1  -->  $man_path\n");
+  if ( -w $man_path ) {
+    system("cp ncutil.1 $man_path");
+  } else {
+    system("sudo cp ncutil.1 $man_path");
+  }
+  print("Done.\n");
+} else {
+  print("ERROR:  Binary executable/framework not available at $src_dir.\n");
+}

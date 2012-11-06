@@ -1,0 +1,155 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  The Directory Tree</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>The Directory Tree</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			Central to <TT>ncutil</TT>'s treatment of network preferences is the idea of a directory tree.  The tree has a root node in which the rest of the directories are embedded:  at the root level of <TT>ncutil</TT>'s directory tree are a <I>network interface template</I> subdirectory and a subdirectory for each network set (called a <I>location</I> herein):
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 1:  The root directory
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ ls
+dr- 1     Interfaces                              Directory
+drw 7     Office                                  Location
+drw 45    On the Road                             Location
+	</TD></TR>
+</TABLE>
+			The first three characters of each line are just like the permissions flags in a UNIX file listing.  The '<TT>d</TT>' character indicates that the item is a directory, and not a <I>property</I> associated with a directory (properties display a '<TT>-</TT>' character instead).  The '<TT>r</TT>' and '<TT>w</TT>' characters indicate read and write permissions on the item; actually, everything is readable in <TT>ncutil</TT>.  In Listing 1, the network interface template directory (<TT>Interfaces</TT>) is locked and cannot be modified by the user.<BR>
+			<BR>
+			The next two columns list the <I>directory ID</I>, a numerical value assigned dynamically to each node of the directory tree, and the directory name.  The directory IDs may change from run to run of <TT>ncutil</TT> as locations and services are added or removed.  Likewise, if you rename a location or a service, the directory name will change, as well.  You may use a directory ID in place of a <I>directory path</I> in any of <TT>ncutil</TT>'s commands.  A directory path is just like a UNIX file path:  a hierarchy of subdirectory names are joined by a <I>separator string</I>.  By default, <TT>ncutil</TT> uses the '<TT>/</TT>' character to separate path components.  Thus, the network interface template directory could be referenced either by ID (<TT>1</TT>) or by path (<TT CLASS="Command">/Interfaces</TT>).  Alternatively, if we were using '<TT>:::</TT>' as our path separator string, the path would be <TT CLASS="Command">:::Interfaces</TT>.  The root directory itself has an ID of <TT>0</TT> (zero) and a path consisting of the path separator string alone (<TT>/</TT> for the default and <TT>:::</TT> for the alternative separator string we've mentioned).  Special characters (single- and double-quotes, spaces) can be included in the path using an escape sequence:  prefix the character with a '<TT>\</TT>' character.  For example, the <B>On the Road</B> location path could be entered quoted as <TT CLASS="Command">"/On the Road"</TT> or escaped as <TT CLASS="Command">/On\ the\ Road</TT>.<BR>
+			<BR>
+			The program has a <I>current directory</I> (also called a <I>working directory</I>) that some of its commands will consult when no explicit directory is specified:  the <TT CLASS="Command">ls</TT> command shown in Listing 1 has no directory argument, and thus applies to the current directory (which by default happens to be the root directory).  Another useful aspect of the current directory is that it allows the user to enter <I>relative paths</I> rather than typing full, canonical path names.  To examine some network service directories in the <B>Office</B> location, for example:
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 2:  Changing the current directory
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ read /Office/Built-in\ Ethernet
+-rw       inactive = true
+-rw       name = Built-in Ethernet
+[0 ]$ read /Office/Built-in\ FireWire
+-rw       name = Built-in FireWire
+[0 ]$ cd /Office
+[7 Office]$ read Built-in\ Ethernet
+-rw       inactive = true
+-rw       name = Built-in Ethernet
+[7 Office]$ read Built-in\ FireWire
+-rw       name = Built-in FireWire
+	</TD></TR>
+</TABLE>
+			Of course, as paths get longer the current directory feature becomes more and more useful.  The <TT>ncutil</TT> prompt will change to reflect the current directory, and paths meant to be relative to it do NOT begin with the separator string.  You can display the current directory using the <TT CLASS="Command">pwd</TT> command.<BR>
+			<BR>
+			Let's examine some of the directory node types that appear in an <TT>ncutil</TT> directory tree.<BR>
+			<BR>
+			<HR>
+			<BLOCKQUOTE>
+				<H4>The Network Interface Templates Directory</H4>
+				Each and every network service is constructed around a single network interface.  In order for <TT>ncutil</TT> to create network services, it is important that the user be able to communicate just what network interface is to be used by the new service.  To this end, the first directory node to be found in the root directory is the network interface templates directory.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 3:  The network interface templates directory
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ ls 1
+dr- 2     Internal Modem                          Interface
+dr- 3     Bluetooth                               Interface
+dr- 4     Built-in Ethernet                       Interface
+dr- 5     Built-in FireWire                       Interface
+dr- 6     AirPort                                 Interface
+	</TD></TR>
+</TABLE>
+				For the computer on which <TT>ncutil</TT> was run (my PowerBook G4) we can see five different pieces of networking hardware.  Notice that each of these items is locked -- the user should NOT be able to modify templates, of course!  Notice, as well, that each network interface is a directory (signified by the '<TT>d</TT>' in the first column).  Network interfaces may have higher-level interfaces layered on top of them:  the <TT>Internal Modem</TT> does not inherently transmit TCP/IP packets, it requires a PPP interface to be installed on top of it for such usage (luckily for you, <TT>ncutil</TT> knows this and automatically creates modem-based services with a PPP interface installed atop the hardware interface).<BR>
+				<BR>
+				Each network interface template also includes some basic information about the hardware involved.  Listing 4 shows the properties associated with the <TT>Built-in Ethernet</TT> interface.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 4:  Properties of the <TT>Built-in Ethernet</TT> interface template
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ read 4
+-r-       bsd-device = en0
+-r-       layerable-interfaces = {
+            PPP
+          }
+-r-       mac-address = XX:XX:XX:XX:XX:XX
+	</TD></TR>
+</TABLE>
+				Each <I>property</I> has a <I>property key</I> that identifies its value.  Here we see the BSD device name (property key of '<TT>bsd-device</TT>') and hardware-level address (property key '<TT>mac-address</TT>') associated with the device that Mac OS X calls the <TT>Built-in Ethernet</TT> port.  Also displayed are the interfaces that can be layered on top of the <TT>Built-in Ethernet</TT> network interface:  for a network service created to use this network interface, pushing a PPP interface atop its ethernet interface would produce a <I>PPP over Ethernet</I> (or <I>PPPoE</I>) service.<BR>
+				<BR>
+				<HR>
+				<H4>A Location Directory</H4>
+				Each location directory consists of a location-wide NetInfo configuration item and the network services defined for that location.  The NetInfo object can be used to setup how NetInfo should locate a parent server and to what NetInfo domain it should bind itself.  Normally, you would use the Directory Access application to configure this on Mac OS X clients.<BR>
+				<BR>
+				Intrinsic to the way network services are used to configure hardware is the idea of a <I>service order</I>.  For example, I may have two network services defined in my <B>Office</B> location:  one that requests a DHCP IPv4 address and one that uses a statically-allocated IPv4 address.  The service order for my <B>Office</B> location dictates which of these network services gets the first crack at getting my ethernet port transmitting.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 5:  Properties of the <TT>Office</TT> location directory
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ read 7
+-rw       name = Office
+-rw       service-order = {
+            Built-in Ethernet
+            DHCP
+            Built-in FireWire
+            Internal Modem
+            Bluetooth
+            AirPort
+          }
+	</TD></TR>
+</TABLE>
+				I could rename this location by resetting the <TT>name</TT> property; I can modify the ordering of network services by modifying the value of the <TT>service-order</TT> property.  Each network service should be named uniquely within a location.<BR>
+				<BR>
+				<HR>
+				<H4>A Network Service Directory</H4>
+				A network service directory contains a network interface stack (one or more interface objects, one atop another in a series of subdirectories) and protocol configurational entities.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 6:  The <TT>Built-in Ethernet</TT> service for the <B>Office</B> location
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ list 9
+drw 10    Built-in Ethernet                       Interface
+drw 11    Proxies                                 Protocol
+drw 12    AppleTalk                               Protocol
+drw 13    IPv4                                    Protocol
+drw 14    DNS                                     Protocol
+drw 15    IPv6                                    Protocol
+	</TD></TR>
+</TABLE>
+				A network service directory may also have two properties associated with it.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 7:  Properties of the <TT>Office</TT> location directory
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[0 ]$ read 9
+-rw       inactive = true
+-rw       name = Built-in Ethernet
+	</TD></TR>
+</TABLE>
+				The <TT>inactive</TT> property indicates that as the configd process attempts to configure network hardware using the <B>Office</B> location, it should skip the <TT>Built-in Ethernet</TT> service without even attempting to utilize it.  The <TT>enable</TT> and <TT>disable</TT> commands in <TT>ncutil</TT> can be used to make services active or inactive; to allow configd to use the <TT>Built-in Ethernet</TT> network service, we would want to <TT CLASS="Command">enable 9</TT> as far as commands go.  Or, using a path rather than an ID:  <TT CLASS="Command">enable "/Office/Built-in Ethernet"</TT>.
+			</BLOCKQUOTE>
+		
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint"><A HREF="Options.html">Previous Chapter</A></FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint"><A HREF="LocationsAndServices.html">Next Chapter</A></FONT></TD>
+			</TR></TABLE>
+
+		</BLOCKQUOTE>
+		
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

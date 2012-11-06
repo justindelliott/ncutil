@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B2D5E1F0D18222D0097849E /* CFAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483710CECA223008C2B97 /* CFAdditions.c */; };
+		3B2D5E200D18222D0097849E /* CFCString.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483730CECA223008C2B97 /* CFCString.c */; };
+		3B2D5E210D18222D0097849E /* NCError.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483750CECA223008C2B97 /* NCError.c */; };
+		3B2D5E220D18222D0097849E /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483780CECA223008C2B97 /* NCObject.m */; };
+		3B2D5E230D18222D0097849E /* NCTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837A0CECA223008C2B97 /* NCTree.m */; };
+		3B2D5E240D18222D0097849E /* NCDirectoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */; };
+		3B2D5E250D18222D0097849E /* NCEntityPropertyHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */; };
+		3B2D5E260D18222D0097849E /* NCInterfaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483830CECA223008C2B97 /* NCInterfaceNode.m */; };
+		3B2D5E270D18222D0097849E /* NCLocationDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483850CECA223008C2B97 /* NCLocationDirectory.m */; };
+		3B2D5E280D18222D0097849E /* NCProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838B0CECA223008C2B97 /* NCProtocolNode.m */; };
+		3B2D5E290D18222D0097849E /* NCRootDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838D0CECA223008C2B97 /* NCRootDirectory.m */; };
+		3B2D5E2A0D18222D0097849E /* NCServiceDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */; };
+		3B2D5E2B0D18222D0097849E /* NCAirPortProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */; };
+		3B2D5E2C0D18222D0097849E /* NCPortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A20CECA223008C2B97 /* NCPortOptions.m */; };
+		3B2D5E2D0D18222D0097849E /* NCPreferenceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */; };
+		3B2D5E2E0D18222D0097849E /* NCProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A70CECA223008C2B97 /* NCProperty.c */; };
+		3B2D5E2F0D18222D0097849E /* NCPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */; };
+		3B2D5E300D18222D0097849E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C20CECA26C008C2B97 /* main.m */; };
+		3B2D5E310D18222D0097849E /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C40CECA26C008C2B97 /* NCApplication.m */; };
+		3B2D5E320D18222D0097849E /* NCTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8031940CF2127A002B184D /* NCTokenList.m */; };
+		3B2D5E340D18222D0097849E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4484880CED335F008C2B97 /* IOKit.framework */; };
+		3B2D5E350D18222D0097849E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */; };
+		3B2D5E360D18222D0097849E /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
+		3B2D5E380D18222D0097849E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D80CF21CAB002B184D /* CoreFoundation.framework */; };
+		3B2D5E400D1822550097849E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D20CF21C85002B184D /* libobjc.dylib */; };
+		3B2D5E410D18225B0097849E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		3B2D5E5C0D1824C20097849E /* NCTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8031940CF2127A002B184D /* NCTokenList.m */; };
+		3B2D5E5D0D1824C20097849E /* CFAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483710CECA223008C2B97 /* CFAdditions.c */; };
+		3B2D5E5E0D1824C20097849E /* CFCString.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483730CECA223008C2B97 /* CFCString.c */; };
+		3B2D5E5F0D1824C20097849E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C20CECA26C008C2B97 /* main.m */; };
+		3B2D5E600D1824C20097849E /* NCAirPortProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */; };
+		3B2D5E610D1824C20097849E /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C40CECA26C008C2B97 /* NCApplication.m */; };
+		3B2D5E620D1824C20097849E /* NCDirectoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */; };
+		3B2D5E630D1824C20097849E /* NCEntityPropertyHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */; };
+		3B2D5E640D1824C20097849E /* NCError.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483750CECA223008C2B97 /* NCError.c */; };
+		3B2D5E650D1824C20097849E /* NCGlobalNetInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483810CECA223008C2B97 /* NCGlobalNetInfoNode.m */; };
+		3B2D5E660D1824C20097849E /* NCInterfaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483830CECA223008C2B97 /* NCInterfaceNode.m */; };
+		3B2D5E670D1824C20097849E /* NCLocationDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483850CECA223008C2B97 /* NCLocationDirectory.m */; };
+		3B2D5E680D1824C20097849E /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483780CECA223008C2B97 /* NCObject.m */; };
+		3B2D5E690D1824C20097849E /* NCPortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A20CECA223008C2B97 /* NCPortOptions.m */; };
+		3B2D5E6A0D1824C20097849E /* NCPreferenceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */; };
+		3B2D5E6B0D1824C20097849E /* NCProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A70CECA223008C2B97 /* NCProperty.c */; };
+		3B2D5E6C0D1824C20097849E /* NCPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */; };
+		3B2D5E6D0D1824C20097849E /* NCProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838B0CECA223008C2B97 /* NCProtocolNode.m */; };
+		3B2D5E6E0D1824C20097849E /* NCRootDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838D0CECA223008C2B97 /* NCRootDirectory.m */; };
+		3B2D5E6F0D1824C20097849E /* NCServiceDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */; };
+		3B2D5E700D1824C20097849E /* NCTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837A0CECA223008C2B97 /* NCTree.m */; };
+		3B2D5E720D1824C20097849E /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
+		3B2D5E730D1824C20097849E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D80CF21CAB002B184D /* CoreFoundation.framework */; };
+		3B2D5E740D1824C20097849E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4484880CED335F008C2B97 /* IOKit.framework */; };
+		3B2D5E750D1824C20097849E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */; };
+		3B2D5E7C0D1825060097849E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		3B2D5EB00D182BA60097849E /* ncutil_vers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5EAF0D182BA60097849E /* ncutil_vers.c */; };
+		3B2D5EB10D182BA60097849E /* ncutil_vers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5EAF0D182BA60097849E /* ncutil_vers.c */; };
+		3B2D5EB20D182BA60097849E /* ncutil_vers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5EAF0D182BA60097849E /* ncutil_vers.c */; };
+		3B2D5EB30D182BA60097849E /* ncutil_vers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5EAF0D182BA60097849E /* ncutil_vers.c */; };
+		3B4483AB0CECA223008C2B97 /* CFAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483710CECA223008C2B97 /* CFAdditions.c */; };
+		3B4483AC0CECA223008C2B97 /* CFCString.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483730CECA223008C2B97 /* CFCString.c */; };
+		3B4483AD0CECA223008C2B97 /* NCError.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483750CECA223008C2B97 /* NCError.c */; };
+		3B4483AE0CECA223008C2B97 /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483780CECA223008C2B97 /* NCObject.m */; };
+		3B4483AF0CECA223008C2B97 /* NCTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837A0CECA223008C2B97 /* NCTree.m */; };
+		3B4483B00CECA223008C2B97 /* NCDirectoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */; };
+		3B4483B10CECA223008C2B97 /* NCEntityPropertyHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */; };
+		3B4483B30CECA223008C2B97 /* NCInterfaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483830CECA223008C2B97 /* NCInterfaceNode.m */; };
+		3B4483B40CECA223008C2B97 /* NCLocationDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483850CECA223008C2B97 /* NCLocationDirectory.m */; };
+		3B4483B70CECA223008C2B97 /* NCProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838B0CECA223008C2B97 /* NCProtocolNode.m */; };
+		3B4483B80CECA223008C2B97 /* NCRootDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838D0CECA223008C2B97 /* NCRootDirectory.m */; };
+		3B4483B90CECA223008C2B97 /* NCServiceDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */; };
+		3B4483BA0CECA223008C2B97 /* NCAirPortProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */; };
+		3B4483BB0CECA223008C2B97 /* NCPortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A20CECA223008C2B97 /* NCPortOptions.m */; };
+		3B4483BC0CECA223008C2B97 /* NCPreferenceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */; };
+		3B4483BD0CECA223008C2B97 /* NCProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A70CECA223008C2B97 /* NCProperty.c */; };
+		3B4483BE0CECA223008C2B97 /* NCPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */; };
+		3B4483C50CECA26C008C2B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C20CECA26C008C2B97 /* main.m */; };
+		3B4483C60CECA26C008C2B97 /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C40CECA26C008C2B97 /* NCApplication.m */; };
+		3B4484890CED335F008C2B97 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4484880CED335F008C2B97 /* IOKit.framework */; };
+		3B44848E0CED337B008C2B97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */; };
+		3B8031950CF2127A002B184D /* NCTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8031940CF2127A002B184D /* NCTokenList.m */; };
+		3B8031960CF2127A002B184D /* NCTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8031940CF2127A002B184D /* NCTokenList.m */; };
+		3B8031BD0CF21AAE002B184D /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
+		3B8031BE0CF21AAE002B184D /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
+		3B8031D30CF21C85002B184D /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D20CF21C85002B184D /* libobjc.dylib */; };
+		3B8031D90CF21CAB002B184D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D80CF21CAB002B184D /* CoreFoundation.framework */; };
+		3B8031DA0CF21CAB002B184D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D80CF21CAB002B184D /* CoreFoundation.framework */; };
+		3B8032760CF2861E002B184D /* CFAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483710CECA223008C2B97 /* CFAdditions.c */; };
+		3B8032770CF28620002B184D /* CFCString.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483730CECA223008C2B97 /* CFCString.c */; };
+		3B8032780CF28622002B184D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C20CECA26C008C2B97 /* main.m */; };
+		3B8032790CF28627002B184D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4484880CED335F008C2B97 /* IOKit.framework */; };
+		3B80327A0CF2862C002B184D /* NCAirPortProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */; };
+		3B80327B0CF2862D002B184D /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C40CECA26C008C2B97 /* NCApplication.m */; };
+		3B80327C0CF2862F002B184D /* NCDirectoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */; };
+		3B80327D0CF2862F002B184D /* NCEntityPropertyHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */; };
+		3B80327E0CF28633002B184D /* NCError.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483750CECA223008C2B97 /* NCError.c */; };
+		3B8032800CF28638002B184D /* NCGlobalNetInfoNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483810CECA223008C2B97 /* NCGlobalNetInfoNode.m */; };
+		3B8032810CF28639002B184D /* NCInterfaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483830CECA223008C2B97 /* NCInterfaceNode.m */; };
+		3B8032820CF2863A002B184D /* NCLocationDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483850CECA223008C2B97 /* NCLocationDirectory.m */; };
+		3B8032830CF2863B002B184D /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483780CECA223008C2B97 /* NCObject.m */; };
+		3B8032840CF2863C002B184D /* NCPortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A20CECA223008C2B97 /* NCPortOptions.m */; };
+		3B8032850CF2863D002B184D /* NCPreferenceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */; };
+		3B8032860CF2863F002B184D /* NCProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A70CECA223008C2B97 /* NCProperty.c */; };
+		3B8032870CF28641002B184D /* NCPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */; };
+		3B8032880CF28643002B184D /* NCProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838B0CECA223008C2B97 /* NCProtocolNode.m */; };
+		3B8032890CF28644002B184D /* NCRootDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838D0CECA223008C2B97 /* NCRootDirectory.m */; };
+		3B80328A0CF28646002B184D /* NCServiceDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */; };
+		3B80328B0CF28647002B184D /* NCTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837A0CECA223008C2B97 /* NCTree.m */; };
+		3B80328C0CF28649002B184D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B2D5E390D18222D0097849E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32A70AAB03705E1F00C91783 /* ncutil_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncutil_Prefix.pch; sourceTree = "<group>"; };
+		3B2D5E3D0D18222D0097849E /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2D5E7A0D1824C20097849E /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2D5EA30D182A750097849E /* ncutil_vers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ncutil_vers.h; path = Utility/ncutil_vers.h; sourceTree = SOURCE_ROOT; };
+		3B2D5EAF0D182BA60097849E /* ncutil_vers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ncutil_vers.c; path = Utility/ncutil_vers.c; sourceTree = SOURCE_ROOT; };
+		3B4483710CECA223008C2B97 /* CFAdditions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CFAdditions.c; path = NCUtilFoundation/Base/CFAdditions.c; sourceTree = SOURCE_ROOT; };
+		3B4483720CECA223008C2B97 /* CFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFAdditions.h; path = NCUtilFoundation/Base/CFAdditions.h; sourceTree = SOURCE_ROOT; };
+		3B4483730CECA223008C2B97 /* CFCString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CFCString.c; path = NCUtilFoundation/Base/CFCString.c; sourceTree = SOURCE_ROOT; };
+		3B4483740CECA223008C2B97 /* CFCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFCString.h; path = NCUtilFoundation/Base/CFCString.h; sourceTree = SOURCE_ROOT; };
+		3B4483750CECA223008C2B97 /* NCError.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NCError.c; path = NCUtilFoundation/Base/NCError.c; sourceTree = SOURCE_ROOT; };
+		3B4483760CECA223008C2B97 /* NCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCError.h; path = NCUtilFoundation/Base/NCError.h; sourceTree = SOURCE_ROOT; };
+		3B4483770CECA223008C2B97 /* NCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCObject.h; path = NCUtilFoundation/Base/NCObject.h; sourceTree = SOURCE_ROOT; };
+		3B4483780CECA223008C2B97 /* NCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCObject.m; path = NCUtilFoundation/Base/NCObject.m; sourceTree = SOURCE_ROOT; };
+		3B4483790CECA223008C2B97 /* NCTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCTree.h; path = NCUtilFoundation/Base/NCTree.h; sourceTree = SOURCE_ROOT; };
+		3B44837A0CECA223008C2B97 /* NCTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCTree.m; path = NCUtilFoundation/Base/NCTree.m; sourceTree = SOURCE_ROOT; };
+		3B44837C0CECA223008C2B97 /* NCDirectoryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCDirectoryNode.h; path = NCUtilFoundation/Directory/NCDirectoryNode.h; sourceTree = SOURCE_ROOT; };
+		3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCDirectoryNode.m; path = NCUtilFoundation/Directory/NCDirectoryNode.m; sourceTree = SOURCE_ROOT; };
+		3B44837E0CECA223008C2B97 /* NCEntityPropertyHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCEntityPropertyHandlers.h; path = NCUtilFoundation/Directory/NCEntityPropertyHandlers.h; sourceTree = SOURCE_ROOT; };
+		3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCEntityPropertyHandlers.m; path = NCUtilFoundation/Directory/NCEntityPropertyHandlers.m; sourceTree = SOURCE_ROOT; };
+		3B4483800CECA223008C2B97 /* NCGlobalNetInfoNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCGlobalNetInfoNode.h; path = NCUtilFoundation/Directory/NCGlobalNetInfoNode.h; sourceTree = SOURCE_ROOT; };
+		3B4483810CECA223008C2B97 /* NCGlobalNetInfoNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCGlobalNetInfoNode.m; path = NCUtilFoundation/Directory/NCGlobalNetInfoNode.m; sourceTree = SOURCE_ROOT; };
+		3B4483820CECA223008C2B97 /* NCInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCInterfaceNode.h; path = NCUtilFoundation/Directory/NCInterfaceNode.h; sourceTree = SOURCE_ROOT; };
+		3B4483830CECA223008C2B97 /* NCInterfaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCInterfaceNode.m; path = NCUtilFoundation/Directory/NCInterfaceNode.m; sourceTree = SOURCE_ROOT; };
+		3B4483840CECA223008C2B97 /* NCLocationDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCLocationDirectory.h; path = NCUtilFoundation/Directory/NCLocationDirectory.h; sourceTree = SOURCE_ROOT; };
+		3B4483850CECA223008C2B97 /* NCLocationDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCLocationDirectory.m; path = NCUtilFoundation/Directory/NCLocationDirectory.m; sourceTree = SOURCE_ROOT; };
+		3B44838A0CECA223008C2B97 /* NCProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCProtocolNode.h; path = NCUtilFoundation/Directory/NCProtocolNode.h; sourceTree = SOURCE_ROOT; };
+		3B44838B0CECA223008C2B97 /* NCProtocolNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCProtocolNode.m; path = NCUtilFoundation/Directory/NCProtocolNode.m; sourceTree = SOURCE_ROOT; };
+		3B44838C0CECA223008C2B97 /* NCRootDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCRootDirectory.h; path = NCUtilFoundation/Directory/NCRootDirectory.h; sourceTree = SOURCE_ROOT; };
+		3B44838D0CECA223008C2B97 /* NCRootDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCRootDirectory.m; path = NCUtilFoundation/Directory/NCRootDirectory.m; sourceTree = SOURCE_ROOT; };
+		3B44838E0CECA223008C2B97 /* NCServiceDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCServiceDirectory.h; path = NCUtilFoundation/Directory/NCServiceDirectory.h; sourceTree = SOURCE_ROOT; };
+		3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCServiceDirectory.m; path = NCUtilFoundation/Directory/NCServiceDirectory.m; sourceTree = SOURCE_ROOT; };
+		3B4483910CECA223008C2B97 /* NC6to4InterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NC6to4InterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NC6to4InterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483920CECA223008C2B97 /* NCBluetoothInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCBluetoothInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCBluetoothInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483930CECA223008C2B97 /* NCEthernetInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCEthernetInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCEthernetInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483940CECA223008C2B97 /* NCFireWireInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCFireWireInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCFireWireInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483950CECA223008C2B97 /* NCL2TPInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCL2TPInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCL2TPInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483960CECA223008C2B97 /* NCModemInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCModemInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCModemInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483970CECA223008C2B97 /* NCPPPInterfaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCPPPInterfaceNode.h; path = "NCUtilFoundation/Directory/Private Interface Nodes/NCPPPInterfaceNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483990CECA223008C2B97 /* NCAirPortProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCAirPortProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCAirPortProtocolNode.m; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m"; sourceTree = SOURCE_ROOT; };
+		3B44839B0CECA223008C2B97 /* NCAppleTalkProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCAppleTalkProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCAppleTalkProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B44839C0CECA223008C2B97 /* NCDNSProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCDNSProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCDNSProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B44839D0CECA223008C2B97 /* NCIPv4ProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCIPv4ProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCIPv4ProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B44839E0CECA223008C2B97 /* NCIPv6ProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCIPv6ProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCIPv6ProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B44839F0CECA223008C2B97 /* NCProxiesProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCProxiesProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCProxiesProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		3B4483A10CECA223008C2B97 /* NCPortOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCPortOptions.h; path = NCUtilFoundation/Hardware/NCPortOptions.h; sourceTree = SOURCE_ROOT; };
+		3B4483A20CECA223008C2B97 /* NCPortOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCPortOptions.m; path = NCUtilFoundation/Hardware/NCPortOptions.m; sourceTree = SOURCE_ROOT; };
+		3B4483A30CECA223008C2B97 /* NCPreferenceSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCPreferenceSession.h; path = NCUtilFoundation/NCPreferenceSession.h; sourceTree = SOURCE_ROOT; };
+		3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCPreferenceSession.m; path = NCUtilFoundation/NCPreferenceSession.m; sourceTree = SOURCE_ROOT; };
+		3B4483A50CECA223008C2B97 /* NCUtilFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCUtilFoundation.h; path = NCUtilFoundation/NCUtilFoundation.h; sourceTree = SOURCE_ROOT; };
+		3B4483A70CECA223008C2B97 /* NCProperty.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NCProperty.c; path = "NCUtilFoundation/Property Handling/NCProperty.c"; sourceTree = SOURCE_ROOT; };
+		3B4483A80CECA223008C2B97 /* NCProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCProperty.h; path = "NCUtilFoundation/Property Handling/NCProperty.h"; sourceTree = SOURCE_ROOT; };
+		3B4483A90CECA223008C2B97 /* NCPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCPropertyHandler.h; path = "NCUtilFoundation/Property Handling/NCPropertyHandler.h"; sourceTree = SOURCE_ROOT; };
+		3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCPropertyHandler.m; path = "NCUtilFoundation/Property Handling/NCPropertyHandler.m"; sourceTree = SOURCE_ROOT; };
+		3B4483C00CECA261008C2B97 /* ncutil.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; name = ncutil.1; path = Documentation/ncutil.1; sourceTree = SOURCE_ROOT; };
+		3B4483C20CECA26C008C2B97 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Utility/main.m; sourceTree = SOURCE_ROOT; };
+		3B4483C30CECA26C008C2B97 /* NCApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCApplication.h; path = Utility/NCApplication.h; sourceTree = SOURCE_ROOT; };
+		3B4483C40CECA26C008C2B97 /* NCApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCApplication.m; path = Utility/NCApplication.m; sourceTree = SOURCE_ROOT; };
+		3B4484880CED335F008C2B97 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		3B4484F80CEDF29F008C2B97 /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8031930CF2127A002B184D /* NCTokenList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCTokenList.h; path = Utility/NCTokenList.h; sourceTree = SOURCE_ROOT; };
+		3B8031940CF2127A002B184D /* NCTokenList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCTokenList.m; path = Utility/NCTokenList.m; sourceTree = SOURCE_ROOT; };
+		3B8031BC0CF21AAE002B184D /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = /usr/lib/libreadline.dylib; sourceTree = "<absolute>"; };
+		3B8031D20CF21C85002B184D /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = /usr/lib/libobjc.dylib; sourceTree = "<absolute>"; };
+		3B8031D80CF21CAB002B184D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		3B8032C20CF290C2002B184D /* NCSMBProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSMBProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCSMBProtocolNode.h"; sourceTree = SOURCE_ROOT; };
+		8DD76FA10486AA7600D96B5E /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B2D5E330D18222D0097849E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2D5E340D18222D0097849E /* IOKit.framework in Frameworks */,
+				3B2D5E350D18222D0097849E /* SystemConfiguration.framework in Frameworks */,
+				3B2D5E360D18222D0097849E /* libreadline.dylib in Frameworks */,
+				3B2D5E380D18222D0097849E /* CoreFoundation.framework in Frameworks */,
+				3B2D5E410D18225B0097849E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B2D5E710D1824C20097849E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2D5E720D1824C20097849E /* libreadline.dylib in Frameworks */,
+				3B2D5E730D1824C20097849E /* CoreFoundation.framework in Frameworks */,
+				3B2D5E740D1824C20097849E /* IOKit.framework in Frameworks */,
+				3B2D5E750D1824C20097849E /* SystemConfiguration.framework in Frameworks */,
+				3B2D5E7C0D1825060097849E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4484F60CEDF29F008C2B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8031BE0CF21AAE002B184D /* libreadline.dylib in Frameworks */,
+				3B8031DA0CF21CAB002B184D /* CoreFoundation.framework in Frameworks */,
+				3B8032790CF28627002B184D /* IOKit.framework in Frameworks */,
+				3B80328C0CF28649002B184D /* SystemConfiguration.framework in Frameworks */,
+				3B2D5E400D1822550097849E /* libobjc.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4484890CED335F008C2B97 /* IOKit.framework in Frameworks */,
+				3B44848E0CED337B008C2B97 /* SystemConfiguration.framework in Frameworks */,
+				3B8031BD0CF21AAE002B184D /* libreadline.dylib in Frameworks */,
+				3B8031D30CF21C85002B184D /* libobjc.dylib in Frameworks */,
+				3B8031D90CF21CAB002B184D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ncutil */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483BF0CECA261008C2B97 /* Documentation */,
+				32A70AAB03705E1F00C91783 /* ncutil_Prefix.pch */,
+				3B44836F0CECA223008C2B97 /* NCUtilFoundation */,
+				3B4483C10CECA26C008C2B97 /* Utility */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = ncutil;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3B8031D80CF21CAB002B184D /* CoreFoundation.framework */,
+				3B8031D20CF21C85002B184D /* libobjc.dylib */,
+				3B8031BC0CF21AAE002B184D /* libreadline.dylib */,
+				3B44848D0CED337B008C2B97 /* SystemConfiguration.framework */,
+				3B4484880CED335F008C2B97 /* IOKit.framework */,
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FA10486AA7600D96B5E /* ncutil */,
+				3B4484F80CEDF29F008C2B97 /* ncutil */,
+				3B2D5E3D0D18222D0097849E /* ncutil */,
+				3B2D5E7A0D1824C20097849E /* ncutil */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B44836F0CECA223008C2B97 /* NCUtilFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483700CECA223008C2B97 /* Base */,
+				3B44837B0CECA223008C2B97 /* Directory */,
+				3B4483A00CECA223008C2B97 /* Hardware */,
+				3B4483A30CECA223008C2B97 /* NCPreferenceSession.h */,
+				3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */,
+				3B4483A50CECA223008C2B97 /* NCUtilFoundation.h */,
+			);
+			path = NCUtilFoundation;
+			sourceTree = "<group>";
+		};
+		3B4483700CECA223008C2B97 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483710CECA223008C2B97 /* CFAdditions.c */,
+				3B4483720CECA223008C2B97 /* CFAdditions.h */,
+				3B4483730CECA223008C2B97 /* CFCString.c */,
+				3B4483740CECA223008C2B97 /* CFCString.h */,
+				3B4483750CECA223008C2B97 /* NCError.c */,
+				3B4483760CECA223008C2B97 /* NCError.h */,
+				3B4483770CECA223008C2B97 /* NCObject.h */,
+				3B4483780CECA223008C2B97 /* NCObject.m */,
+				3B4483790CECA223008C2B97 /* NCTree.h */,
+				3B44837A0CECA223008C2B97 /* NCTree.m */,
+			);
+			name = Base;
+			path = NCUtilFoundation/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		3B44837B0CECA223008C2B97 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483A70CECA223008C2B97 /* NCProperty.c */,
+				3B4483A80CECA223008C2B97 /* NCProperty.h */,
+				3B4483A90CECA223008C2B97 /* NCPropertyHandler.h */,
+				3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */,
+				3B44837C0CECA223008C2B97 /* NCDirectoryNode.h */,
+				3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */,
+				3B44837E0CECA223008C2B97 /* NCEntityPropertyHandlers.h */,
+				3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */,
+				3B4483800CECA223008C2B97 /* NCGlobalNetInfoNode.h */,
+				3B4483810CECA223008C2B97 /* NCGlobalNetInfoNode.m */,
+				3B4483820CECA223008C2B97 /* NCInterfaceNode.h */,
+				3B4483830CECA223008C2B97 /* NCInterfaceNode.m */,
+				3B4483840CECA223008C2B97 /* NCLocationDirectory.h */,
+				3B4483850CECA223008C2B97 /* NCLocationDirectory.m */,
+				3B44838A0CECA223008C2B97 /* NCProtocolNode.h */,
+				3B44838B0CECA223008C2B97 /* NCProtocolNode.m */,
+				3B44838C0CECA223008C2B97 /* NCRootDirectory.h */,
+				3B44838D0CECA223008C2B97 /* NCRootDirectory.m */,
+				3B44838E0CECA223008C2B97 /* NCServiceDirectory.h */,
+				3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */,
+				3B4483900CECA223008C2B97 /* Private Interface Nodes */,
+				3B4483980CECA223008C2B97 /* Private Protocol Nodes */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		3B4483900CECA223008C2B97 /* Private Interface Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483910CECA223008C2B97 /* NC6to4InterfaceNode.h */,
+				3B4483920CECA223008C2B97 /* NCBluetoothInterfaceNode.h */,
+				3B4483930CECA223008C2B97 /* NCEthernetInterfaceNode.h */,
+				3B4483940CECA223008C2B97 /* NCFireWireInterfaceNode.h */,
+				3B4483950CECA223008C2B97 /* NCL2TPInterfaceNode.h */,
+				3B4483960CECA223008C2B97 /* NCModemInterfaceNode.h */,
+				3B4483970CECA223008C2B97 /* NCPPPInterfaceNode.h */,
+			);
+			path = "Private Interface Nodes";
+			sourceTree = "<group>";
+		};
+		3B4483980CECA223008C2B97 /* Private Protocol Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483990CECA223008C2B97 /* NCAirPortProtocolNode.h */,
+				3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */,
+				3B44839B0CECA223008C2B97 /* NCAppleTalkProtocolNode.h */,
+				3B44839C0CECA223008C2B97 /* NCDNSProtocolNode.h */,
+				3B8032C20CF290C2002B184D /* NCSMBProtocolNode.h */,
+				3B44839D0CECA223008C2B97 /* NCIPv4ProtocolNode.h */,
+				3B44839E0CECA223008C2B97 /* NCIPv6ProtocolNode.h */,
+				3B44839F0CECA223008C2B97 /* NCProxiesProtocolNode.h */,
+			);
+			path = "Private Protocol Nodes";
+			sourceTree = "<group>";
+		};
+		3B4483A00CECA223008C2B97 /* Hardware */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483A10CECA223008C2B97 /* NCPortOptions.h */,
+				3B4483A20CECA223008C2B97 /* NCPortOptions.m */,
+			);
+			path = Hardware;
+			sourceTree = "<group>";
+		};
+		3B4483BF0CECA261008C2B97 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483C00CECA261008C2B97 /* ncutil.1 */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		3B4483C10CECA26C008C2B97 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3B4483C20CECA26C008C2B97 /* main.m */,
+				3B4483C30CECA26C008C2B97 /* NCApplication.h */,
+				3B4483C40CECA26C008C2B97 /* NCApplication.m */,
+				3B8031930CF2127A002B184D /* NCTokenList.h */,
+				3B8031940CF2127A002B184D /* NCTokenList.m */,
+				3B2D5EA30D182A750097849E /* ncutil_vers.h */,
+				3B2D5EAF0D182BA60097849E /* ncutil_vers.c */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B2D5E1D0D18222D0097849E /* ncutil (MacOSX 10.5) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2D5E3A0D18222D0097849E /* Build configuration list for PBXNativeTarget "ncutil (MacOSX 10.5)" */;
+			buildPhases = (
+				3B2D5E1E0D18222D0097849E /* Sources */,
+				3B2D5E330D18222D0097849E /* Frameworks */,
+				3B2D5E390D18222D0097849E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ncutil (MacOSX 10.5)";
+			productInstallPath = "$(HOME)/bin";
+			productName = ncutil;
+			productReference = 3B2D5E3D0D18222D0097849E /* ncutil */;
+			productType = "com.apple.product-type.tool";
+		};
+		3B2D5E5A0D1824C20097849E /* ncutil (MacOSX 10.4) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2D5E770D1824C20097849E /* Build configuration list for PBXNativeTarget "ncutil (MacOSX 10.4)" */;
+			buildPhases = (
+				3B2D5E5B0D1824C20097849E /* Sources */,
+				3B2D5E710D1824C20097849E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ncutil (MacOSX 10.4)";
+			productName = "ncutil (Darwin, 10.4)";
+			productReference = 3B2D5E7A0D1824C20097849E /* ncutil */;
+			productType = "com.apple.product-type.tool";
+		};
+		3B4484F70CEDF29F008C2B97 /* ncutil (Darwin 10.4) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4484FC0CEDF2BF008C2B97 /* Build configuration list for PBXNativeTarget "ncutil (Darwin 10.4)" */;
+			buildPhases = (
+				3B4484F50CEDF29F008C2B97 /* Sources */,
+				3B4484F60CEDF29F008C2B97 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ncutil (Darwin 10.4)";
+			productName = "ncutil (Darwin, 10.4)";
+			productReference = 3B4484F80CEDF29F008C2B97 /* ncutil */;
+			productType = "com.apple.product-type.tool";
+		};
+		8DD76F960486AA7600D96B5E /* ncutil (Darwin 10.5) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "ncutil (Darwin 10.5)" */;
+			buildPhases = (
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				8DD76F9E0486AA7600D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ncutil (Darwin 10.5)";
+			productInstallPath = "$(HOME)/bin";
+			productName = ncutil;
+			productReference = 8DD76FA10486AA7600D96B5E /* ncutil */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "ncutil" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ncutil */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F960486AA7600D96B5E /* ncutil (Darwin 10.5) */,
+				3B4484F70CEDF29F008C2B97 /* ncutil (Darwin 10.4) */,
+				3B2D5E1D0D18222D0097849E /* ncutil (MacOSX 10.5) */,
+				3B2D5E5A0D1824C20097849E /* ncutil (MacOSX 10.4) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B2D5E1E0D18222D0097849E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2D5E1F0D18222D0097849E /* CFAdditions.c in Sources */,
+				3B2D5E200D18222D0097849E /* CFCString.c in Sources */,
+				3B2D5E210D18222D0097849E /* NCError.c in Sources */,
+				3B2D5E220D18222D0097849E /* NCObject.m in Sources */,
+				3B2D5E230D18222D0097849E /* NCTree.m in Sources */,
+				3B2D5E240D18222D0097849E /* NCDirectoryNode.m in Sources */,
+				3B2D5E250D18222D0097849E /* NCEntityPropertyHandlers.m in Sources */,
+				3B2D5E260D18222D0097849E /* NCInterfaceNode.m in Sources */,
+				3B2D5E270D18222D0097849E /* NCLocationDirectory.m in Sources */,
+				3B2D5E280D18222D0097849E /* NCProtocolNode.m in Sources */,
+				3B2D5E290D18222D0097849E /* NCRootDirectory.m in Sources */,
+				3B2D5E2A0D18222D0097849E /* NCServiceDirectory.m in Sources */,
+				3B2D5E2B0D18222D0097849E /* NCAirPortProtocolNode.m in Sources */,
+				3B2D5E2C0D18222D0097849E /* NCPortOptions.m in Sources */,
+				3B2D5E2D0D18222D0097849E /* NCPreferenceSession.m in Sources */,
+				3B2D5E2E0D18222D0097849E /* NCProperty.c in Sources */,
+				3B2D5E2F0D18222D0097849E /* NCPropertyHandler.m in Sources */,
+				3B2D5E300D18222D0097849E /* main.m in Sources */,
+				3B2D5E310D18222D0097849E /* NCApplication.m in Sources */,
+				3B2D5E320D18222D0097849E /* NCTokenList.m in Sources */,
+				3B2D5EB10D182BA60097849E /* ncutil_vers.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B2D5E5B0D1824C20097849E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2D5E5C0D1824C20097849E /* NCTokenList.m in Sources */,
+				3B2D5E5D0D1824C20097849E /* CFAdditions.c in Sources */,
+				3B2D5E5E0D1824C20097849E /* CFCString.c in Sources */,
+				3B2D5E5F0D1824C20097849E /* main.m in Sources */,
+				3B2D5E600D1824C20097849E /* NCAirPortProtocolNode.m in Sources */,
+				3B2D5E610D1824C20097849E /* NCApplication.m in Sources */,
+				3B2D5E620D1824C20097849E /* NCDirectoryNode.m in Sources */,
+				3B2D5E630D1824C20097849E /* NCEntityPropertyHandlers.m in Sources */,
+				3B2D5E640D1824C20097849E /* NCError.c in Sources */,
+				3B2D5E650D1824C20097849E /* NCGlobalNetInfoNode.m in Sources */,
+				3B2D5E660D1824C20097849E /* NCInterfaceNode.m in Sources */,
+				3B2D5E670D1824C20097849E /* NCLocationDirectory.m in Sources */,
+				3B2D5E680D1824C20097849E /* NCObject.m in Sources */,
+				3B2D5E690D1824C20097849E /* NCPortOptions.m in Sources */,
+				3B2D5E6A0D1824C20097849E /* NCPreferenceSession.m in Sources */,
+				3B2D5E6B0D1824C20097849E /* NCProperty.c in Sources */,
+				3B2D5E6C0D1824C20097849E /* NCPropertyHandler.m in Sources */,
+				3B2D5E6D0D1824C20097849E /* NCProtocolNode.m in Sources */,
+				3B2D5E6E0D1824C20097849E /* NCRootDirectory.m in Sources */,
+				3B2D5E6F0D1824C20097849E /* NCServiceDirectory.m in Sources */,
+				3B2D5E700D1824C20097849E /* NCTree.m in Sources */,
+				3B2D5EB20D182BA60097849E /* ncutil_vers.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4484F50CEDF29F008C2B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8031960CF2127A002B184D /* NCTokenList.m in Sources */,
+				3B8032760CF2861E002B184D /* CFAdditions.c in Sources */,
+				3B8032770CF28620002B184D /* CFCString.c in Sources */,
+				3B8032780CF28622002B184D /* main.m in Sources */,
+				3B80327A0CF2862C002B184D /* NCAirPortProtocolNode.m in Sources */,
+				3B80327B0CF2862D002B184D /* NCApplication.m in Sources */,
+				3B80327C0CF2862F002B184D /* NCDirectoryNode.m in Sources */,
+				3B80327D0CF2862F002B184D /* NCEntityPropertyHandlers.m in Sources */,
+				3B80327E0CF28633002B184D /* NCError.c in Sources */,
+				3B8032800CF28638002B184D /* NCGlobalNetInfoNode.m in Sources */,
+				3B8032810CF28639002B184D /* NCInterfaceNode.m in Sources */,
+				3B8032820CF2863A002B184D /* NCLocationDirectory.m in Sources */,
+				3B8032830CF2863B002B184D /* NCObject.m in Sources */,
+				3B8032840CF2863C002B184D /* NCPortOptions.m in Sources */,
+				3B8032850CF2863D002B184D /* NCPreferenceSession.m in Sources */,
+				3B8032860CF2863F002B184D /* NCProperty.c in Sources */,
+				3B8032870CF28641002B184D /* NCPropertyHandler.m in Sources */,
+				3B8032880CF28643002B184D /* NCProtocolNode.m in Sources */,
+				3B8032890CF28644002B184D /* NCRootDirectory.m in Sources */,
+				3B80328A0CF28646002B184D /* NCServiceDirectory.m in Sources */,
+				3B80328B0CF28647002B184D /* NCTree.m in Sources */,
+				3B2D5EB30D182BA60097849E /* ncutil_vers.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4483AB0CECA223008C2B97 /* CFAdditions.c in Sources */,
+				3B4483AC0CECA223008C2B97 /* CFCString.c in Sources */,
+				3B4483AD0CECA223008C2B97 /* NCError.c in Sources */,
+				3B4483AE0CECA223008C2B97 /* NCObject.m in Sources */,
+				3B4483AF0CECA223008C2B97 /* NCTree.m in Sources */,
+				3B4483B00CECA223008C2B97 /* NCDirectoryNode.m in Sources */,
+				3B4483B10CECA223008C2B97 /* NCEntityPropertyHandlers.m in Sources */,
+				3B4483B30CECA223008C2B97 /* NCInterfaceNode.m in Sources */,
+				3B4483B40CECA223008C2B97 /* NCLocationDirectory.m in Sources */,
+				3B4483B70CECA223008C2B97 /* NCProtocolNode.m in Sources */,
+				3B4483B80CECA223008C2B97 /* NCRootDirectory.m in Sources */,
+				3B4483B90CECA223008C2B97 /* NCServiceDirectory.m in Sources */,
+				3B4483BA0CECA223008C2B97 /* NCAirPortProtocolNode.m in Sources */,
+				3B4483BB0CECA223008C2B97 /* NCPortOptions.m in Sources */,
+				3B4483BC0CECA223008C2B97 /* NCPreferenceSession.m in Sources */,
+				3B4483BD0CECA223008C2B97 /* NCProperty.c in Sources */,
+				3B4483BE0CECA223008C2B97 /* NCPropertyHandler.m in Sources */,
+				3B4483C50CECA26C008C2B97 /* main.m in Sources */,
+				3B4483C60CECA26C008C2B97 /* NCApplication.m in Sources */,
+				3B8031950CF2127A002B184D /* NCTokenList.m in Sources */,
+				3B2D5EB00D182BA60097849E /* ncutil_vers.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927508733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ncutil;
+				SYMROOT = "build-darwin-10_5";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB927608733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ncutil;
+				SYMROOT = "build-darwin-10_5";
+			};
+			name = Release;
+		};
+		1DEB927908733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		1DEB927A08733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		3B2D5E3B0D18222D0097849E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ncutil;
+				SYMROOT = "build-macosx-10_5";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		3B2D5E3C0D18222D0097849E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ncutil;
+				SYMROOT = "build-macosx-10_5";
+			};
+			name = Release;
+		};
+		3B2D5E780D1824C20097849E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = ncutil;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SYMROOT = "build-macosx-10_4";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		3B2D5E790D1824C20097849E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = ncutil;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SYMROOT = "build-macosx-10_4";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		3B4484FA0CEDF2A1008C2B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = ncutil;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SYMROOT = "build-darwin-10_4";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		3B4484FB0CEDF2A1008C2B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = ncutil;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SYMROOT = "build-darwin-10_4";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "ncutil (Darwin 10.5)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927508733DD40010E9CD /* Debug */,
+				1DEB927608733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "ncutil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927908733DD40010E9CD /* Debug */,
+				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B2D5E3A0D18222D0097849E /* Build configuration list for PBXNativeTarget "ncutil (MacOSX 10.5)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2D5E3B0D18222D0097849E /* Debug */,
+				3B2D5E3C0D18222D0097849E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B2D5E770D1824C20097849E /* Build configuration list for PBXNativeTarget "ncutil (MacOSX 10.4)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2D5E780D1824C20097849E /* Debug */,
+				3B2D5E790D1824C20097849E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4484FC0CEDF2BF008C2B97 /* Build configuration list for PBXNativeTarget "ncutil (Darwin 10.4)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4484FA0CEDF2A1008C2B97 /* Debug */,
+				3B4484FB0CEDF2A1008C2B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

@@ -1,0 +1,105 @@
+<HTML>
+	<HEAD>
+		<TITLE>ncutil 3:  Running as a Shell</TITLE>
+		<LINK REL="STYLESHEET" href="ncutil.css" type="text/css">
+	</HEAD>
+	<BODY>
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR VALIGN="BOTTOM" WIDTH="100%">
+			<TD>
+				<H1>ncutil 3</H1>
+				<H2>User's Guide</H2>
+			</TD>
+			<TD ALIGN="RIGHT">
+				<H3>Running as a Shell</H3>
+			</TD>
+		</TR></TABLE>
+		
+		<BLOCKQUOTE>
+			All of the listings presented in this manual illustrate <TT>ncutil</TT> running in <I>pseudo-shell mode</I>, where the user may type many commands at a prompt.  This is the most efficient way to make use of the program, since each time it is executed it must initially build the directory tree structure.  Pseudo-shell mode is invoked simply by invoking <TT>ncutil</TT> without an explicit command on the command line.  In pseudo-shell mode, option flags may be passed to the program with each command typed by placing the flags between the command name and the arguments to that command.
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 19:  Pseudo-shell mode.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[user@localhost ~]$ ncutil -activate
+[0 ]$ read
+-rw       computer-name = My PowerBook
+-rw       current-location = Office
+[0 ]$ setprop -P ::: current-location :::At\ Home
+[0 ]$ read
+-rw       computer-name = My PowerBook
+-rw       current-location = At Home
+	</TD></TR>
+</TABLE>
+			There are several commands that are only really useful when the program is run in pseudo-shell mode.<BR>
+			<BR>
+			<TABLE CLASS="Command" CELLSPACING="0">
+				<TR CLASS="CommandHeader">
+					<TH WIDTH="40%">Command</TH><TH>Explanation</TH>
+				</TR>
+				<TR>
+					<TD><TT>chdir {options} {directory}</TT></TD>
+					<TD>
+						Makes the specified directory (referenced either by ID or path) the current directory for the program.  The more UNIX-like "<TT>cd</TT>" form may be used, too.
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>pwd {options}</TT></TD>
+					<TD>
+						Prints the canonical path form of the current directory.
+					</TD>
+				</TR>
+				<TR>
+					<TD><TT>commit {options} {directory}</TT></TD>
+					<TD>
+						The properties associated with a directory are not pushed into the actual SystemConfiguration preference store until the program exits or this command is used.
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>refresh {options} {directory}</TT></TD>
+					<TD>
+						Pulls a pristine copy of the directory's properties from the SystemConfiguration preference store, wiping-out any changes that have been made to it.
+					</TD>
+				</TR>
+				<TR>
+					<TD><TT>apply-changes {options}</TT></TD>
+					<TD>
+						Forces all changes to be committed and then attempts to get the <TT>configd</TT> daemon to notice those changes and reconfigure the network state immediately.
+					</TD>
+				</TR>
+				<TR CLASS="CommandAltRow">
+					<TD><TT>set-options {options}</TT></TD>
+					<TD>
+						A dummy command that does nothing but allows the user to provide command options.  Useful if while in pseudo-shell mode the path separator needs to be set, for example.
+					</TD>
+				</TR>
+			</TABLE>
+			<BR>
+			The order of options, command, and arguments is modified slightly when <TT>ncutil</TT> is run from the command line itself:
+<TABLE BORDER="0">
+	<TR><TD WIDTH="10" BGCOLOR="#02468A">&nbsp;</TD><TD>
+		Listing 20:  Using <TT>ncutil</TT> from the command line.
+	</TD></TR>
+	<TR><TD WIDTH="10">&nbsp;</TD><TD CLASS="Code">[user@localhost ~]$ ncutil -activate -P : setprop 0 current-location :At\ Home
+[user@localhost ~]$ ncutil read 0
+-rw       computer-name = My PowerBook
+-rw       current-location = At Home
+	</TD></TR>
+</TABLE>
+			Options should be specified first, then the <TT>ncutil</TT> command, followed by arguments to that command.
+
+			<TABLE WIDTH="100%" BORDER="0"><TR WIDTH="100%">
+				<TD WIDTH="33%" ALIGN="LEFT"><FONT CLASS="SmallPrint"><A HREF="ConfiguringAService.html">Previous Chapter</A></FONT></TD>
+				<TD WIDTH="34%" ALIGN="CENTER"><FONT CLASS="SmallPrint"><A HREF="index.html">Table of Contents</A></FONT></TD>
+				<TD WIDTH="33%" ALIGN="RIGHT"><FONT CLASS="SmallPrint">&nbsp;</FONT></TD>
+			</TR></TABLE>
+
+		</BLOCKQUOTE>
+		
+		
+		<TABLE WIDTH="100%" BORDER="0" BGCOLOR="#02468A"><TR WIDTH="100%">
+			<TD WIDTH="100%" ALIGN="CENTER">
+				<FONT CLASS="SmallPrint">Copyright &copy; 2005 | Jeffrey T. Frey</FONT>
+			</TD>
+		</TR></TABLE>
+	</BODY>
+</HTML>

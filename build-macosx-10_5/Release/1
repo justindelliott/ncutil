@@ -1,0 +1,455 @@
+Sat Jan 26 12:43:26 2008 [8341]: :: Program initialization commencing:
+Sat Jan 26 12:43:26 2008 [8341]: :: * Checking for command-line options
+Sat Jan 26 12:43:26 2008 [8341]: :: Checking environment for a preference path
+Sat Jan 26 12:43:26 2008 [8341]: :: Allocating directory tree for preference store
+Sat Jan 26 12:43:26 2008 [8341]: :: Program initialization complete (SCError = 1004).
+{ removeChild(1,0x1207b0,0x1207b0)...notifying delegates...done. }Built-in Ethernet {
+  self = 0x1207b0 (1)
+  dealloc child 0x122a20
+Ethernet {
+  self = 0x122a20 (1)
+  dealloc sibling 0x1227b0
+SMB {
+  self = 0x1227b0 (1)
+  dealloc sibling 0x1225f0
+IPv6 {
+  self = 0x1225f0 (1)
+  dealloc sibling 0x124550
+Proxies {
+  self = 0x124550 (1)
+  dealloc sibling 0x124580
+AppleTalk {
+  self = 0x124580 (1)
+  dealloc sibling 0x122970
+IPv4 {
+  self = 0x122970 (1)
+  dealloc sibling 0x1229a0
+DNS {
+  self = 0x1229a0 (1)
+  remove 0x1229a0 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x1229a0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x122970 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x122970)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x124580 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x124580)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x124550 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x124550)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1225f0 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x1225f0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1227b0 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x1227b0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x122a20 from parent 0x1207b0
+{ removeChild(1,0x122a20,0x122a20)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x1086d0,0x1086d0)...notifying delegates...done. }Internal Modem {
+  self = 0x1086d0 (1)
+  dealloc child 0x10d5c0
+PPP --> Internal Modem {
+  self = 0x10d5c0 (1)
+  dealloc child 0x11f1e0
+Internal Modem {
+  self = 0x11f1e0 (1)
+  remove 0x11f1e0 from parent 0x10d5c0
+{ removeChild(1,0x11f1e0,0x11f1e0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc sibling 0x110c70
+SMB {
+  self = 0x110c70 (1)
+  dealloc sibling 0x110b00
+IPv6 {
+  self = 0x110b00 (1)
+  dealloc sibling 0x10a630
+Proxies {
+  self = 0x10a630 (1)
+  dealloc sibling 0x10d3e0
+IPv4 {
+  self = 0x10d3e0 (1)
+  dealloc sibling 0x123bd0
+DNS {
+  self = 0x123bd0 (1)
+  remove 0x123bd0 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x123bd0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10d3e0 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x10d3e0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10a630 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x10a630)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x110b00 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x110b00)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x110c70 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x110c70)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10d5c0 from parent 0x1086d0
+{ removeChild(1,0x10d5c0,0x10d5c0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x118970,0x118970)...notifying delegates...done. }Bluetooth {
+  self = 0x118970 (1)
+  dealloc child 0x10d500
+PPP --> Bluetooth {
+  self = 0x10d500 (1)
+  dealloc child 0x10f840
+Bluetooth {
+  self = 0x10f840 (1)
+  remove 0x10f840 from parent 0x10d500
+{ removeChild(1,0x10f840,0x10f840)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc sibling 0x123b80
+SMB {
+  self = 0x123b80 (1)
+  dealloc sibling 0x10e840
+IPv6 {
+  self = 0x10e840 (1)
+  dealloc sibling 0x10e870
+Proxies {
+  self = 0x10e870 (1)
+  dealloc sibling 0x123c80
+IPv4 {
+  self = 0x123c80 (1)
+  dealloc sibling 0x123cb0
+DNS {
+  self = 0x123cb0 (1)
+  remove 0x123cb0 from parent 0x118970
+{ removeChild(1,0x10d500,0x123cb0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123c80 from parent 0x118970
+{ removeChild(1,0x10d500,0x123c80)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10e870 from parent 0x118970
+{ removeChild(1,0x10d500,0x10e870)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10e840 from parent 0x118970
+{ removeChild(1,0x10d500,0x10e840)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123b80 from parent 0x118970
+{ removeChild(1,0x10d500,0x123b80)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x10d500 from parent 0x118970
+{ removeChild(1,0x10d500,0x10d500)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x123b20,0x123b20)...notifying delegates...done. }USA19H3b1P1. {
+  self = 0x123b20 (1)
+  dealloc child 0x123e00
+PPP --> USA19H3b1P1. {
+  self = 0x123e00 (1)
+  dealloc child 0x123e30
+USA19H3b1P1. {
+  self = 0x123e30 (1)
+  remove 0x123e30 from parent 0x123e00
+{ removeChild(1,0x123e30,0x123e30)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc sibling 0x123e60
+SMB {
+  self = 0x123e60 (1)
+  dealloc sibling 0x123e90
+IPv6 {
+  self = 0x123e90 (1)
+  dealloc sibling 0x123ec0
+Proxies {
+  self = 0x123ec0 (1)
+  dealloc sibling 0x123ef0
+IPv4 {
+  self = 0x123ef0 (1)
+  dealloc sibling 0x133760
+DNS {
+  self = 0x133760 (1)
+  remove 0x133760 from parent 0x123b20
+{ removeChild(1,0x123e00,0x133760)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123ef0 from parent 0x123b20
+{ removeChild(1,0x123e00,0x123ef0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123ec0 from parent 0x123b20
+{ removeChild(1,0x123e00,0x123ec0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123e90 from parent 0x123b20
+{ removeChild(1,0x123e00,0x123e90)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123e60 from parent 0x123b20
+{ removeChild(1,0x123e00,0x123e60)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x123e00 from parent 0x123b20
+{ removeChild(1,0x123e00,0x123e00)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x123f20,0x123f20)...notifying delegates...done. }Built-in FireWire {
+  self = 0x123f20 (1)
+  dealloc child 0x134060
+FireWire {
+  self = 0x134060 (1)
+  dealloc sibling 0x1340c0
+SMB {
+  self = 0x1340c0 (1)
+  dealloc sibling 0x1341f0
+IPv6 {
+  self = 0x1341f0 (1)
+  dealloc sibling 0x134220
+Proxies {
+  self = 0x134220 (1)
+  dealloc sibling 0x134250
+AppleTalk {
+  self = 0x134250 (1)
+  dealloc sibling 0x134280
+IPv4 {
+  self = 0x134280 (1)
+  dealloc sibling 0x1342b0
+DNS {
+  self = 0x1342b0 (1)
+  remove 0x1342b0 from parent 0x123f20
+{ removeChild(1,0x134060,0x1342b0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x134280 from parent 0x123f20
+{ removeChild(1,0x134060,0x134280)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x134250 from parent 0x123f20
+{ removeChild(1,0x134060,0x134250)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x134220 from parent 0x123f20
+{ removeChild(1,0x134060,0x134220)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1341f0 from parent 0x123f20
+{ removeChild(1,0x134060,0x1341f0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1340c0 from parent 0x123f20
+{ removeChild(1,0x134060,0x1340c0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x134060 from parent 0x123f20
+{ removeChild(1,0x134060,0x134060)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x1340f0,0x1340f0)...notifying delegates...done. }AirPort {
+  self = 0x1340f0 (1)
+  dealloc child 0x134120
+AirPort {
+  self = 0x134120 (1)
+  dealloc sibling 0x1342e0
+SMB {
+  self = 0x1342e0 (1)
+  dealloc sibling 0x136370
+IPv6 {
+  self = 0x136370 (1)
+  dealloc sibling 0x1363a0
+Proxies {
+  self = 0x1363a0 (1)
+  dealloc sibling 0x1363d0
+AppleTalk {
+  self = 0x1363d0 (1)
+  dealloc sibling 0x136400
+IPv4 {
+  self = 0x136400 (1)
+  dealloc sibling 0x136430
+DNS {
+  self = 0x136430 (1)
+  dealloc sibling 0x135450
+Apple AirPort {
+  self = 0x135450 (1)
+  remove 0x135450 from parent 0x1340f0
+{ removeChild(1,0x134120,0x135450)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x136430 from parent 0x1340f0
+{ removeChild(1,0x134120,0x136430)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x136400 from parent 0x1340f0
+{ removeChild(1,0x134120,0x136400)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1363d0 from parent 0x1340f0
+{ removeChild(1,0x134120,0x1363d0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1363a0 from parent 0x1340f0
+{ removeChild(1,0x134120,0x1363a0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x136370 from parent 0x1340f0
+{ removeChild(1,0x134120,0x136370)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1342e0 from parent 0x1340f0
+{ removeChild(1,0x134120,0x1342e0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x134120 from parent 0x1340f0
+{ removeChild(1,0x134120,0x134120)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x134310,0x134310)...notifying delegates...done. }KeySerial {
+  self = 0x134310 (1)
+  dealloc child 0x1353f0
+PPP --> KeySerial {
+  self = 0x1353f0 (1)
+  dealloc child 0x135420
+KeySerial {
+  self = 0x135420 (1)
+  remove 0x135420 from parent 0x1353f0
+{ removeChild(1,0x135420,0x135420)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc sibling 0x1337f0
+SMB {
+  self = 0x1337f0 (1)
+  dealloc sibling 0x133820
+IPv6 {
+  self = 0x133820 (1)
+  dealloc sibling 0x133850
+Proxies {
+  self = 0x133850 (1)
+  dealloc sibling 0x133880
+IPv4 {
+  self = 0x133880 (1)
+  dealloc sibling 0x1338b0
+DNS {
+  self = 0x1338b0 (1)
+  remove 0x1338b0 from parent 0x134310
+{ removeChild(1,0x1353f0,0x1338b0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x133880 from parent 0x134310
+{ removeChild(1,0x1353f0,0x133880)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x133850 from parent 0x134310
+{ removeChild(1,0x1353f0,0x133850)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x133820 from parent 0x134310
+{ removeChild(1,0x1353f0,0x133820)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1337f0 from parent 0x134310
+{ removeChild(1,0x1353f0,0x1337f0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  remove 0x1353f0 from parent 0x134310
+{ removeChild(1,0x1353f0,0x1353f0)...notifying delegates...done. }  dealloc object 0x105660
+}
+  dealloc object 0x105660
+}
+{ removeChild(1,0x107600,0x120440)...notifying delegates...done. }Crossover {
+  self = 0x120440 (1)
+  dealloc object 0x105660
+}
+|-NCTree@0x105990(2) { 0x105660 }
+  |-NCTree@0x107600(1) { 0x105660 }
+    |-NCTree@0x107e10(1) { 0x105660 }
+    |-NCTree@0x1087e0(1) { 0x105660 }
+    |-NCTree@0x109b60(1) { 0x105660 }
+    |-NCTree@0x11e850(1) { 0x105660 }
+    |-NCTree@0x118940(1) { 0x105660 }
+  |-NCTree@0x113a60(1) { 0x105660 }
+    |-NCTree@0x112610(1) { 0x105660 }
+      |-NCTree@0x112860(1) { 0x105660 }
+      |-NCTree@0x1082b0(1) { 0x105660 }
+      |-NCTree@0x108340(1) { 0x105660 }
+      |-NCTree@0x11f250(1) { 0x105660 }
+      |-NCTree@0x10d410(1) { 0x105660 }
+      |-NCTree@0x10d4b0(1) { 0x105660 }
+      |-NCTree@0x10d550(1) { 0x105660 }
+    |-NCTree@0x10d5f0(1) { 0x105660 }
+      |-NCTree@0x10d6b0(1) { 0x105660 }
+        |-NCTree@0x10d6e0(1) { 0x105660 }
+      |-NCTree@0x110be0(1) { 0x105660 }
+      |-NCTree@0x110c10(1) { 0x105660 }
+      |-NCTree@0x110cd0(1) { 0x105660 }
+      |-NCTree@0x110d00(1) { 0x105660 }
+      |-NCTree@0x110c40(1) { 0x105660 }
+    |-NCTree@0x110d50(1) { 0x105660 }
+      |-NCTree@0x1211c0(1) { 0x105660 }
+      |-NCTree@0x111e00(1) { 0x105660 }
+      |-NCTree@0x111cf0(1) { 0x105660 }
+      |-NCTree@0x121300(1) { 0x105660 }
+      |-NCTree@0x10c1a0(1) { 0x105660 }
+      |-NCTree@0x10c1d0(1) { 0x105660 }
+      |-NCTree@0x10c250(1) { 0x105660 }
+    |-NCTree@0x121210(1) { 0x105660 }
+      |-NCTree@0x10b250(1) { 0x105660 }
+      |-NCTree@0x1200d0(1) { 0x105660 }
+      |-NCTree@0x120120(1) { 0x105660 }
+      |-NCTree@0x120050(1) { 0x105660 }
+      |-NCTree@0x120280(1) { 0x105660 }
+      |-NCTree@0x120300(1) { 0x105660 }
+      |-NCTree@0x1101e0(1) { 0x105660 }
+    |-NCTree@0x1201e0(1) { 0x105660 }
+      |-NCTree@0x110330(1) { 0x105660 }
+        |-NCTree@0x110360(1) { 0x105660 }
+      |-NCTree@0x10cba0(1) { 0x105660 }
+      |-NCTree@0x10cb30(1) { 0x105660 }
+      |-NCTree@0x10cbd0(1) { 0x105660 }
+      |-NCTree@0x10cc00(1) { 0x105660 }
+      |-NCTree@0x10cc30(1) { 0x105660 }
+    |-NCTree@0x10cab0(1) { 0x105660 }
+      |-NCTree@0x10cc60(1) { 0x105660 }
+        |-NCTree@0x120860(1) { 0x105660 }
+      |-NCTree@0x10c280(1) { 0x105660 }
+      |-NCTree@0x10c2b0(1) { 0x105660 }
+      |-NCTree@0x10f150(1) { 0x105660 }
+      |-NCTree@0x10f180(1) { 0x105660 }
+      |-NCTree@0x10f1b0(1) { 0x105660 }
+    |-NCTree@0x10cdc0(1) { 0x105660 }
+      |-NCTree@0x1203f0(1) { 0x105660 }
+        |-NCTree@0x10f1e0(1) { 0x105660 }
+      |-NCTree@0x131e30(1) { 0x105660 }
+      |-NCTree@0x120560(1) { 0x105660 }
+      |-NCTree@0x131e60(1) { 0x105660 }
+      |-NCTree@0x10c300(1) { 0x105660 }
+      |-NCTree@0x10c330(1) { 0x105660 }
+    |-NCTree@0x1205d0(1) { 0x105660 }
+      |-NCTree@0x10c360(1) { 0x105660 }
+      |-NCTree@0x10c390(1) { 0x105660 }
+      |-NCTree@0x120500(1) { 0x105660 }
+      |-NCTree@0x1236d0(1) { 0x105660 }
+      |-NCTree@0x123700(1) { 0x105660 }
+      |-NCTree@0x123730(1) { 0x105660 }
+      |-NCTree@0x123760(1) { 0x105660 }
+      |-NCTree@0x1237e0(1) { 0x105660 }
+  |-NCTree@0x120760(1) { 0x105660 }
+    |-NCTree@0x1339f0(1) { 0x105660 }
+      |-NCTree@0x113ad0(1) { 0x105660 }
+      |-NCTree@0x1338e0(1) { 0x105660 }
+      |-NCTree@0x133960(1) { 0x105660 }
+      |-NCTree@0x136d60(1) { 0x105660 }
+      |-NCTree@0x136d90(1) { 0x105660 }
+      |-NCTree@0x134370(1) { 0x105660 }
+      |-NCTree@0x1343a0(1) { 0x105660 }
+      |-NCTree@0x134430(1) { 0x105660 }
+    |-NCTree@0x133910(1) { 0x105660 }
+      |-NCTree@0x1343d0(1) { 0x105660 }
+      |-NCTree@0x134400(1) { 0x105660 }
+      |-NCTree@0x136220(1) { 0x105660 }
+      |-NCTree@0x136500(1) { 0x105660 }
+      |-NCTree@0x136530(1) { 0x105660 }
+      |-NCTree@0x136560(1) { 0x105660 }
+      |-NCTree@0x136590(1) { 0x105660 }
+    |-NCTree@0x1365c0(1) { 0x105660 }
+      |-NCTree@0x134f10(1) { 0x105660 }
+        |-NCTree@0x134bd0(1) { 0x105660 }
+      |-NCTree@0x1356f0(1) { 0x105660 }
+      |-NCTree@0x135b80(1) { 0x105660 }
+      |-NCTree@0x135bb0(1) { 0x105660 }
+      |-NCTree@0x135be0(1) { 0x105660 }
+      |-NCTree@0x135c10(1) { 0x105660 }
+    |-NCTree@0x1361d0(1) { 0x105660 }
+      |-NCTree@0x135cf0(1) { 0x105660 }
+        |-NCTree@0x135120(1) { 0x105660 }
+      |-NCTree@0x134de0(1) { 0x105660 }
+      |-NCTree@0Sat Jan 26 12:43:26 2008 [8341]: NCError(18): The changes could not be written to the preference store.
+x134e10(1) { 0x105660 }
+      |-NCTree@0x134e40(1) { 0x105660 }
+      |-NCTree@0x134e70(1) { 0x105660 }
+      |-NCTree@0x134c80(1) { 0x105660 }
+    |-NCTree@0x135150(1) { 0x105660 }
+      |-NCTree@0x134cb0(1) { 0x105660 }
+      |-NCTree@0x1357d0(1) { 0x105660 }
+      |-NCTree@0x13a780(1) { 0x105660 }
+      |-NCTree@0x134cf0(1) { 0x105660 }
+      |-NCTree@0x134d20(1) { 0x105660 }
+      |-NCTree@0x134d50(1) { 0x105660 }
+      |-NCTree@0x13a890(1) { 0x105660 }
+[31m[1mERROR[0m:    could not commit the modifications
+ 
