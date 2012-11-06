@@ -276,8 +276,8 @@
 		3B8031D80CF21CAB002B184D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		3B8032C20CF290C2002B184D /* NCSMBProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSMBProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCSMBProtocolNode.h"; sourceTree = SOURCE_ROOT; };
 		8DD76FA10486AA7600D96B5E /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
-		F46F00EC16499B760029EA6C /* ncutil (Darwin 10.5) copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncutil (Darwin 10.5) copy"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.5) copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncutil (MacOSX 10.5) copy"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46F00EC16499B760029EA6C /* ncutil (Darwin 10.7) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncutil (Darwin 10.7)"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.7) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncutil (MacOSX 10.7)"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,8 +389,8 @@
 				3B4484F80CEDF29F008C2B97 /* ncutil */,
 				3B2D5E3D0D18222D0097849E /* ncutil */,
 				3B2D5E7A0D1824C20097849E /* ncutil */,
-				F46F00EC16499B760029EA6C /* ncutil (Darwin 10.5) copy */,
-				F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.5) copy */,
+				F46F00EC16499B760029EA6C /* ncutil (Darwin 10.7) */,
+				F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.7) */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -601,7 +601,7 @@
 			name = "ncutil (Darwin 10.7)";
 			productInstallPath = "$(HOME)/bin";
 			productName = ncutil;
-			productReference = F46F00EC16499B760029EA6C /* ncutil (Darwin 10.5) copy */;
+			productReference = F46F00EC16499B760029EA6C /* ncutil (Darwin 10.7) */;
 			productType = "com.apple.product-type.tool";
 		};
 		F46F00EE16499BAB0029EA6C /* ncutil (MacOSX 10.7) */ = {
@@ -619,7 +619,7 @@
 			name = "ncutil (MacOSX 10.7)";
 			productInstallPath = "$(HOME)/bin";
 			productName = ncutil;
-			productReference = F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.5) copy */;
+			productReference = F46F010F16499BAB0029EA6C /* ncutil (MacOSX 10.7) */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -979,7 +979,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = "ncutil (Darwin 10.5) copy";
+				PRODUCT_NAME = "ncutil (Darwin 10.7)";
 				SDKROOT = macosx10.7;
 				SYMROOT = "build-darwin-10_7";
 				ZERO_LINK = YES;
@@ -993,7 +993,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = "ncutil (Darwin 10.5) copy";
+				PRODUCT_NAME = "ncutil (Darwin 10.7)";
 				SDKROOT = macosx10.7;
 				SYMROOT = "build-darwin-10_7";
 			};
@@ -1010,8 +1010,8 @@
 				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = "ncutil (MacOSX 10.5) copy";
-				SYMROOT = "build-macosx-10_5";
+				PRODUCT_NAME = "ncutil (MacOSX 10.7)";
+				SYMROOT = "build-macosx-10_7";
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -1024,8 +1024,8 @@
 				GCC_PREFIX_HEADER = ncutil_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = NCUTIL_USE_FOUNDATION;
 				INSTALL_PATH = /usr/local/bin;
-				PRODUCT_NAME = "ncutil (MacOSX 10.5) copy";
-				SYMROOT = "build-macosx-10_5";
+				PRODUCT_NAME = "ncutil (MacOSX 10.7)";
+				SYMROOT = "build-macosx-10_7";
 			};
 			name = Release;
 		};
