@@ -1,2 +1,6 @@
 ncutil.xcodeproj/project.xcworkspace/xcuserdata
 ncutil.xcodeproj/xcuserdata
+build-darwin-10_5
+build-darwin-10_7
+build-macosx-10_5
+build-macosx-10_7
