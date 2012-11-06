@@ -5,25 +5,25 @@ cCheck dependencies
 cProcessPCH /var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-fnujynhoqmifdwgwmlccltbcxkgx/ncutil_Prefix.pch.pth ncutil_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-artkvpfixybqlsclgvpznnhxisnz/ncutil_Prefix.pch.pth ncutil_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCObject.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCObject.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCTokenList.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCServiceDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCServiceDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCProtocolNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCProtocolNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCError.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCError.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCLocationDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCEntityPropertyHandlers.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/CFCString.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFCString.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCError.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCError.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCProtocolNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCProtocolNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/CFAdditions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFAdditions.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCTree.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCTree.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCEntityPropertyHandlers.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCDirectoryNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCDirectoryNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCInterfaceNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCAirPortProtocolNode.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPortOptions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Hardware/NCPortOptions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCLocationDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCRootDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCRootDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPropertyHandler.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCPropertyHandler.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCAirPortProtocolNode.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCInterfaceNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCServiceDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCServiceDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPreferenceSession.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCPreferenceSession.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/main.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPropertyHandler.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCPropertyHandler.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPortOptions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Hardware/NCPortOptions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCProperty.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCProperty.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/main.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/ncutil_vers.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/ncutil_vers.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCTokenList.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCApplication.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCApplication.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/Debug/ncutil normal i386
 
@@ -328,96 +328,96 @@ t1199244042
 s581
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/Debug/ncutil
-t1352232700
+t1352233289
 s308520
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/CFAdditions.o
-t1352232698
+t1352233060
 s19620
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/CFCString.o
-t1352232698
+t1352233060
 s9548
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCAirPortProtocolNode.o
-t1352232700
+t1352233060
 s14580
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCApplication.o
-t1352232700
+t1352233060
 s65112
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCDirectoryNode.o
-t1352232699
+t1352233060
 s69300
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCEntityPropertyHandlers.o
-t1352232699
+t1352233060
 s55024
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCError.o
-t1352232698
+t1352233060
 s18180
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCInterfaceNode.o
-t1352232699
+t1352233060
 s78212
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCLocationDirectory.o
-t1352232699
+t1352233060
 s32096
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCObject.o
-t1352232699
+t1352233060
 s20240
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPortOptions.o
-t1352232699
+t1352233060
 s29360
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPreferenceSession.o
-t1352232700
+t1352233060
 s28668
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCProperty.o
-t1352232699
+t1352233061
 s52528
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCPropertyHandler.o
-t1352232700
+t1352233059
 s16544
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCProtocolNode.o
-t1352232700
+t1352233060
 s52352
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCRootDirectory.o
-t1352232699
+t1352233060
 s27280
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCServiceDirectory.o
-t1352232700
+t1352233060
 s34404
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCTokenList.o
-t1352232700
+t1352233060
 s12936
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/NCTree.o
-t1352232699
+t1352233060
 s33860
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/main.o
-t1352232700
+t1352233059
 s2600
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/ncutil.LinkFileList
-c0000000050996EFA0000000000000C01
-t1352232698
+c00000000509970630000000000000C01
+t1352233059
 s3073
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/ncutil_vers.o
-t1352232698
+t1352233060
 s3848
 
 N/Users/jde6/Documents/Repositories/git/ncutil/ncutil_Prefix.pch
@@ -509,7 +509,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies172d0c49a749b641^3ee80d49a749b641^---0#1#0#--18"Check dependencies36"1D662FA4-A648-4BBA-927F-8D66B5EAC6D4-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc07981caa949b641^15c781caa949b641^---0#1#0#--18"Check dependencies36"174E22AA-B94E-42B4-AE93-872B2FFB84DA-
 
 CCompileC "build-darwin-10_7/ncutil.build/Debug/ncutil (Darwin 10.7).build/Objects-normal/i386/CFAdditions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFAdditions.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 s373925498.645175

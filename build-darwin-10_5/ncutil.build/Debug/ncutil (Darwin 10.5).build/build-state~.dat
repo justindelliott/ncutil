@@ -2,29 +2,29 @@ Tncutil (Darwin 10.5)
 v5
 r1
 cCheck dependencies
-cProcessPCH /var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-czmrvlchutnqozelmlyxgrswdaxn/ncutil_Prefix.pch.pth ncutil_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-fwshnfjpcuseepcwxlqyziogidyp/ncutil_Prefix.pch.pth ncutil_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/main.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFCString.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFCString.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-czmrvlchutnqozelmlyxgrswdaxn/ncutil_Prefix.pch.pth ncutil_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFAdditions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFAdditions.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFCString.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFCString.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCProperty.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCProperty.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCError.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCError.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTree.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCTree.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/ncutil_vers.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/ncutil_vers.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCObject.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCObject.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCDirectoryNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCDirectoryNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCLocationDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCInterfaceNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCEntityPropertyHandlers.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCServiceDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCServiceDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCRootDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCRootDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCAirPortProtocolNode.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPortOptions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Hardware/NCPortOptions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPreferenceSession.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCPreferenceSession.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTree.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCTree.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCDirectoryNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCDirectoryNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCEntityPropertyHandlers.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCInterfaceNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCLocationDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCProtocolNode.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCProtocolNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCRootDirectory.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCRootDirectory.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPreferenceSession.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCPreferenceSession.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPropertyHandler.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCPropertyHandler.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCProperty.o" "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCProperty.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/ncutil_vers.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/ncutil_vers.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTokenList.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/main.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCApplication.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCApplication.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTokenList.o" /Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/Debug/ncutil normal i386
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
@@ -57,255 +57,90 @@ c000000004767FA9F0000000000001D3D
 t1197996703
 s7485
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFAdditions.h
-c000000004767FA9E0000000000001258
-t1197996702
-s4696
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFCString.c
 c00000000473C66EF0000000000000EB5
 t1195140847
 s3765
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFCString.h
-c00000000473C66EF000000000000083E
-t1195140847
-s2110
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCError.c
 c00000000509964C40000000000002A15
 t1352230084
 s10773
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCError.h
-c00000000473C66EF0000000000000EDA
-t1195140847
-s3802
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCObject.h
-c000000004767F4830000000000000BCC
-t1197995139
-s3020
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCObject.m
 c00000000479B61A80000000000001D56
 t1201365416
 s7510
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCTree.h
-c000000004741D9C400000000000021AB
-t1195497924
-s8619
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/NCTree.m
 c00000000479B6FEF000000000000366F
 t1201369071
 s13935
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCDirectoryNode.h
-c000000004741D9C20000000000005379
-t1195497922
-s21369
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCDirectoryNode.m
 c00000000479B6A330000000000006AAF
 t1201367603
 s27311
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.h
-c000000004741D9C30000000000000508
-t1195497923
-s1288
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCEntityPropertyHandlers.m
 c000000004741E1AF00000000000064E8
 t1195499951
 s25832
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.h
-c000000004741D9C30000000000000B35
-t1195497923
-s2869
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCInterfaceNode.m
 c000000004767FA800000000000002D78
 t1197996672
 s11640
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.h
-c000000004741D9C30000000000000F8A
-t1195497923
-s3978
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCLocationDirectory.m
 c000000004767FA2300000000000040E2
 t1197996579
 s16610
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCProtocolNode.h
-c000000004741D9C400000000000005E7
-t1195497924
-s1511
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCProtocolNode.m
 c000000004767FA800000000000001900
 t1197996672
 s6400
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCRootDirectory.h
-c000000004741D9C40000000000000D61
-t1195497924
-s3425
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCRootDirectory.m
 c000000004767FA090000000000002D49
 t1197996553
 s11593
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCServiceDirectory.h
-c000000004741D9C40000000000000CDC
-t1195497924
-s3292
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/NCServiceDirectory.m
 c000000004767FA800000000000003944
 t1197996672
 s14660
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NC6to4InterfaceNode.h
-c000000004741D9C200000000000005EB
-t1195497922
-s1515
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCBluetoothInterfaceNode.h
-c000000004741D9C20000000000001168
-t1195497922
-s4456
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCEthernetInterfaceNode.h
-c000000004741D9C300000000000012E4
-t1195497923
-s4836
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCFireWireInterfaceNode.h
-c000000004741D9C3000000000000060C
-t1195497923
-s1548
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCL2TPInterfaceNode.h
-c000000004741D9C300000000000008C9
-t1195497923
-s2249
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCModemInterfaceNode.h
-c000000004741D9C3000000000000113E
-t1195497923
-s4414
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Interface Nodes/NCPPPInterfaceNode.h
-c000000004741D9C30000000000002409
-t1195497923
-s9225
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.h
-c000000004741D9C200000000000004B2
-t1195497922
-s1202
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m
 c000000004767FA800000000000000D07
 t1197996672
 s3335
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAppleTalkProtocolNode.h
-c000000004741D9C20000000000000A44
-t1195497922
-s2628
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCDNSProtocolNode.h
-c000000004741D9C200000000000008D2
-t1195497922
-s2258
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCIPv4ProtocolNode.h
-c000000004741D9C30000000000000ACF
-t1195497923
-s2767
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCIPv6ProtocolNode.h
-c000000004741D9C300000000000009E5
-t1195497923
-s2533
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCProxiesProtocolNode.h
-c0000000047425DF40000000000000ED8
-t1195531764
-s3800
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCSMBProtocolNode.h
-c0000000047425C5000000000000008E9
-t1195531344
-s2281
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Hardware/NCPortOptions.h
-c000000004741D9C40000000000002241
-t1195497924
-s8769
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Hardware/NCPortOptions.m
-c00000000509964E80000000000003873
-t1352230120
+c000000004741D9C40000000000003873
+t1195497924
 s14451
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCPreferenceSession.h
-c000000004741D9B70000000000001FB4
-t1195497911
-s8116
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCPreferenceSession.m
 c000000004767FA8000000000000022F0
 t1197996672
 s8944
 
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/NCUtilFoundation.h
-c000000004741D9AA00000000000002D4
-t1195497898
-s724
-
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCProperty.c
 c00000000473C66EF000000000000830C
 t1195140847
 s33548
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCProperty.h
-c000000004767FA800000000000001A01
-t1197996672
-s6657
-
-N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCPropertyHandler.h
-c000000004741D9C40000000000000B63
-t1195497924
-s2915
 
 N/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Property Handling/NCPropertyHandler.m
 c000000004741D9C40000000000001120
 t1195497924
 s4384
 
-N/Users/jde6/Documents/Repositories/git/ncutil/Utility/NCApplication.h
-c000000004767F57500000000000005CE
-t1197995381
-s1486
-
 N/Users/jde6/Documents/Repositories/git/ncutil/Utility/NCApplication.m
 c00000000479B72F8000000000000D3F1
 t1201369848
 s54257
-
-N/Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.h
-c0000000047424F6B00000000000002FB
-t1195528043
-s763
 
 N/Users/jde6/Documents/Repositories/git/ncutil/Utility/NCTokenList.m
 c00000000477BE3AD0000000000001526
@@ -322,103 +157,98 @@ c0000000047CB8D0B000000000000066C
 t1204522251
 s1644
 
-N/Users/jde6/Documents/Repositories/git/ncutil/Utility/ncutil_vers.h
-c00000000477B030A0000000000000245
-t1199244042
-s581
-
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/Debug/ncutil
-t1352233284
-s308520
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFAdditions.o
-t1352233284
-s19620
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFCString.o
-t1352233284
-s9548
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCAirPortProtocolNode.o
-t1352233284
-s14580
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCApplication.o
-t1352233284
-s65112
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCDirectoryNode.o
-t1352233284
-s69300
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCEntityPropertyHandlers.o
-t1352233284
-s55024
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCError.o
-t1352233284
-s18180
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCInterfaceNode.o
-t1352233284
-s78212
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCLocationDirectory.o
-t1352233284
-s32096
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCObject.o
-t1352233284
-s20240
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPortOptions.o
-t1352233284
-s29360
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPreferenceSession.o
-t1352233284
-s28668
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCProperty.o
-t1352233284
-s52528
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCPropertyHandler.o
-t1352233284
-s16544
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCProtocolNode.o
-t1352233284
-s52352
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCRootDirectory.o
-t1352233284
-s27280
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCServiceDirectory.o
-t1352233284
-s34404
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTokenList.o
-t1352233284
-s12936
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/NCTree.o
-t1352233284
-s33860
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/main.o
-t1352233284
-s2600
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/ncutil.LinkFileList
-c00000000509971440000000000000C01
-t1352233284
+c00000000509964C90000000000000C01
+t1352230089
 s3073
 
 N/Users/jde6/Documents/Repositories/git/ncutil/build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/ncutil_vers.o
-t1352233284
-s3848
+t2
+s0
 
 N/Users/jde6/Documents/Repositories/git/ncutil/ncutil_Prefix.pch
 c00000000473C6929000000000000009A
@@ -437,12 +267,12 @@ t1344556382
 s349952
 
 N/var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-czmrvlchutnqozelmlyxgrswdaxn/ncutil_Prefix.pch.pth
-t1352230090
-s9053364
+t2
+s0
 
 N/var/folders/3v/1_7byvcn18dd9qmn6v4tvzk80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ncutil_Prefix-fwshnfjpcuseepcwxlqyziogidyp/ncutil_Prefix.pch.pth
-t1352230089
-s82764
+t2
+s0
 
 CBuild AST from "/Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Directory/Private Protocol Nodes/NCAirPortProtocolNode.m"
 r0
@@ -509,7 +339,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2f85730fa949b641^c4418e0fa949b641^---0#1#0#--18"Check dependencies36"DD775D36-9C8F-4EF7-AE40-CE02DA7F71EB-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciescaa886499c49b641^99659f499c49b641^---0#1#0#--18"Check dependencies36"1680F910-5586-4688-A653-8D913782B2C7-
 
 CCompileC "build-darwin-10_5/ncutil.build/Debug/ncutil (Darwin 10.5).build/Objects-normal/i386/CFAdditions.o" /Users/jde6/Documents/Repositories/git/ncutil/NCUtilFoundation/Base/CFAdditions.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
 s373922889.659804
