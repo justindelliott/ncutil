@@ -45,7 +45,7 @@ struct NCToken {
       
       _tokenCount = count;
       
-      tokenArray = _tokenTable = ((void*)self) + sizeof(struct { @defs(NCTokenList) } );
+        tokenArray = _tokenTable = ((void*)self) + sizeof(struct { @defs(NCTokenList); } );
       textArray = ((char*)_tokenTable) + count * sizeof(struct NCToken);
       
       while ( count-- ) {
