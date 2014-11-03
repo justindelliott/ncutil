@@ -76,7 +76,7 @@ typedef enum _NCComparisonResult {
 
 enum {NCNotFound = 0x7fffffff};
 
-@interface NCObject : NSObject
+@interface NCObject : Object
 {
   unsigned int      _references;
 }
