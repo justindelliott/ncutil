@@ -1,3 +1,9 @@
+###License
+
+This project is licensed under the terms of the [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause).
+
+###About
+
 ncutil can modify the Mac OS X (darwin) network service interface settings on the active OS X system or another system volume.
 
 ncutil behaves much like Apple's legacy NetInfo command line utility, niutil, and the preferences are presented in the form of a directory tree.
