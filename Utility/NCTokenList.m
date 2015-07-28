@@ -39,30 +39,51 @@ struct NCToken {
     tokens:(int*)tokens
     count:(int)count
   {
+    size_t          tableBytes = 0;
+    
+    if ( count && strings && tokens ) {
+      char**      p;
+      int         i = count;
+      
+      tableBytes = count * sizeof(struct NCToken);
+      p = (char**)strings;
+      while ( i-- ) {
+        tableBytes += strlen(*p);
+        p++;
+      }
+    } else {
+      [self release];
+      return nil;
+    }
     if ( self = [super init] ) {
       struct NCToken* tokenArray;
       char*           textArray;
       
-      _tokenCount = count;
+      tokenArray = _tokenTable = malloc(tableBytes);
       
-        tokenArray = _tokenTable = ((void*)self) + sizeof(struct { @defs(NCTokenList); } );
-      textArray = ((char*)_tokenTable) + count * sizeof(struct NCToken);
-      
-      while ( count-- ) {
-        size_t        tmplen;
+      if ( tokenArray ) {
+        _tokenCount = count;
+        textArray = ((void*)_tokenTable) + count * sizeof(struct NCToken);
         
-        tokenArray->text    = textArray;
-        tokenArray->textlen = tmplen = strlen(*strings);
-        tokenArray->token   = *tokens;
-        
-        memcpy(textArray,*strings,tmplen);
-        
-        textArray += tmplen;
-        tokenArray++;
-        strings++;
-        tokens++;
+        while ( count-- ) {
+          size_t        tmplen;
+          
+          tokenArray->text    = textArray;
+          tokenArray->textlen = tmplen = strlen(*strings);
+          tokenArray->token   = *tokens;
+          
+          memcpy(textArray,*strings,tmplen);
+          
+          textArray += tmplen;
+          tokenArray++;
+          strings++;
+          tokens++;
+        }
+        [self sortTokenTable];
+      } else {
+        [self release];
+        self = nil;
       }
-      [self sortTokenTable];
     }
     return self;
   }
@@ -123,29 +144,16 @@ struct NCToken {
     tokens:(const int*)tokens
     count:(int)count
   {
-    //
-    //  We're going to allocate all storage at once, so we need to know:
-    //
-    //    n * sizeof(struct NCToken) +
-    //    sum( strlen(string[i]),{i|0,count - 1} )
-    //
-    id          newObject = nil;
-    
-    if ( count && strings && tokens ) {
-      size_t      bytes = count * sizeof(struct NCToken);
-      char**      p;
-      int         i = count;
-      
-      p = (char**)strings;
-      while ( i-- ) {
-        bytes += strlen(*p);
-        p++;
-      }
-      
-      if ( newObject = NCAllocateObject(self,bytes) )
-        [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
-    }
-    return newObject;
+    if ( count && strings && tokens ) return [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
+    return nil;
+  }
+  
+//
+
+  - (void) dealloc
+  {
+    if ( _tokenTable ) free((void*)_tokenTable);
+    [super dealloc];
   }
   
 //
