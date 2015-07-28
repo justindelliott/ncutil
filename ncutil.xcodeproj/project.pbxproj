@@ -59,6 +59,27 @@
 		3B8031BD0CF21AAE002B184D /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
 		3B8031D30CF21C85002B184D /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D20CF21C85002B184D /* libobjc.dylib */; };
 		3B8031D90CF21CAB002B184D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031D80CF21CAB002B184D /* CoreFoundation.framework */; };
+		E12B5D1E1B68223B00EB29DC /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C40CECA26C008C2B97 /* NCApplication.m */; };
+		E12B5D1F1B68225D00EB29DC /* NCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483780CECA223008C2B97 /* NCObject.m */; };
+		E12B5D201B68225D00EB29DC /* NCTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837A0CECA223008C2B97 /* NCTree.m */; };
+		E12B5D211B68225D00EB29DC /* NCPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483AA0CECA223008C2B97 /* NCPropertyHandler.m */; };
+		E12B5D221B68225D00EB29DC /* NCDirectoryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837D0CECA223008C2B97 /* NCDirectoryNode.m */; };
+		E12B5D231B68225D00EB29DC /* NCEntityPropertyHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44837F0CECA223008C2B97 /* NCEntityPropertyHandlers.m */; };
+		E12B5D251B68225D00EB29DC /* NCInterfaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483830CECA223008C2B97 /* NCInterfaceNode.m */; };
+		E12B5D261B68225D00EB29DC /* NCLocationDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483850CECA223008C2B97 /* NCLocationDirectory.m */; };
+		E12B5D271B68225D00EB29DC /* NCProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838B0CECA223008C2B97 /* NCProtocolNode.m */; };
+		E12B5D281B68225D00EB29DC /* NCRootDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838D0CECA223008C2B97 /* NCRootDirectory.m */; };
+		E12B5D291B68225D00EB29DC /* NCServiceDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44838F0CECA223008C2B97 /* NCServiceDirectory.m */; };
+		E12B5D2A1B68225D00EB29DC /* NCAirPortProtocolNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44839A0CECA223008C2B97 /* NCAirPortProtocolNode.m */; };
+		E12B5D2B1B68225D00EB29DC /* NCPreferenceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A40CECA223008C2B97 /* NCPreferenceSession.m */; };
+		E12B5D2C1B68227800EB29DC /* CFAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483710CECA223008C2B97 /* CFAdditions.c */; };
+		E12B5D2D1B68227800EB29DC /* CFCString.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483730CECA223008C2B97 /* CFCString.c */; };
+		E12B5D2E1B68227800EB29DC /* NCError.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483750CECA223008C2B97 /* NCError.c */; };
+		E12B5D2F1B68227800EB29DC /* NCProperty.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A70CECA223008C2B97 /* NCProperty.c */; };
+		E12B5D301B68227800EB29DC /* ncutil_vers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5EAF0D182BA60097849E /* ncutil_vers.c */; };
+		E12B5D311B6822A000EB29DC /* NCPortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483A20CECA223008C2B97 /* NCPortOptions.m */; };
+		E12B5D341B6824D100EB29DC /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8031BC0CF21AAE002B184D /* libreadline.dylib */; };
+		E12B5D351B68255300EB29DC /* NCTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8031940CF2127A002B184D /* NCTokenList.m */; };
 		F4E4710A1B67F52C00EF4781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4483C20CECA26C008C2B97 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -160,7 +181,7 @@
 		3B8031D80CF21CAB002B184D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		3B8032C20CF290C2002B184D /* NCSMBProtocolNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSMBProtocolNode.h; path = "NCUtilFoundation/Directory/Private Protocol Nodes/NCSMBProtocolNode.h"; sourceTree = SOURCE_ROOT; };
 		8DD76FA10486AA7600D96B5E /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40807981B67E2E800719851 /* ncutil (OS X 10.10) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncutil (OS X 10.10)"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40807981B67E2E800719851 /* ncutil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ncutil; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12B5D341B6824D100EB29DC /* libreadline.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +251,7 @@
 			children = (
 				8DD76FA10486AA7600D96B5E /* ncutil */,
 				3B2D5E3D0D18222D0097849E /* ncutil */,
-				F40807981B67E2E800719851 /* ncutil (OS X 10.10) */,
+				F40807981B67E2E800719851 /* ncutil */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,7 +429,7 @@
 			);
 			name = "ncutil (OS X 10.10)";
 			productName = "ncutil (OS X 10.10)";
-			productReference = F40807981B67E2E800719851 /* ncutil (OS X 10.10) */;
+			productReference = F40807981B67E2E800719851 /* ncutil */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -502,7 +524,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12B5D311B6822A000EB29DC /* NCPortOptions.m in Sources */,
+				E12B5D2C1B68227800EB29DC /* CFAdditions.c in Sources */,
+				E12B5D2D1B68227800EB29DC /* CFCString.c in Sources */,
+				E12B5D2E1B68227800EB29DC /* NCError.c in Sources */,
+				E12B5D2F1B68227800EB29DC /* NCProperty.c in Sources */,
+				E12B5D301B68227800EB29DC /* ncutil_vers.c in Sources */,
+				E12B5D1F1B68225D00EB29DC /* NCObject.m in Sources */,
+				E12B5D201B68225D00EB29DC /* NCTree.m in Sources */,
+				E12B5D211B68225D00EB29DC /* NCPropertyHandler.m in Sources */,
+				E12B5D221B68225D00EB29DC /* NCDirectoryNode.m in Sources */,
+				E12B5D231B68225D00EB29DC /* NCEntityPropertyHandlers.m in Sources */,
+				E12B5D251B68225D00EB29DC /* NCInterfaceNode.m in Sources */,
+				E12B5D261B68225D00EB29DC /* NCLocationDirectory.m in Sources */,
+				E12B5D351B68255300EB29DC /* NCTokenList.m in Sources */,
+				E12B5D271B68225D00EB29DC /* NCProtocolNode.m in Sources */,
+				E12B5D281B68225D00EB29DC /* NCRootDirectory.m in Sources */,
+				E12B5D291B68225D00EB29DC /* NCServiceDirectory.m in Sources */,
+				E12B5D2A1B68225D00EB29DC /* NCAirPortProtocolNode.m in Sources */,
+				E12B5D2B1B68225D00EB29DC /* NCPreferenceSession.m in Sources */,
 				F4E4710A1B67F52C00EF4781 /* main.m in Sources */,
+				E12B5D1E1B68223B00EB29DC /* NCApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +644,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -629,10 +671,16 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ncutil;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -645,7 +693,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -669,9 +717,15 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ncutil;
 				SDKROOT = macosx;
 			};
 			name = Release;
