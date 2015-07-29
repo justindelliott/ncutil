@@ -140,14 +140,35 @@ struct NCToken {
 
 @implementation NCTokenList
 
-  + (id) tokenListWithStrings:(const char**)strings
-    tokens:(const int*)tokens
-    count:(int)count
-  {
-    if ( count && strings && tokens ) return [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
-    return nil;
-  }
-  
++ (id) tokenListWithStrings:(const char**)strings
+                     tokens:(const int*)tokens
+                      count:(int)count
+{
+    //
+    //  We're going to allocate all storage at once, so we need to know:
+    //
+    //    n * sizeof(struct NCToken) +
+    //    sum( strlen(string[i]),{i|0,count - 1} )
+    //
+    id          newObject = nil;
+    
+    if ( count && strings && tokens ) {
+        size_t      bytes = count * sizeof(struct NCToken);
+        char**      p;
+        int         i = count;
+        
+        p = (char**)strings;
+        while ( i-- ) {
+            bytes += strlen(*p);
+            p++;
+        }
+        
+        if ( newObject = NCAllocateObject(self,bytes) )
+            [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
+    }
+    return newObject;
+}
+
 //
 
   - (void) dealloc
