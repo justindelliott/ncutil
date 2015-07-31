@@ -1225,7 +1225,7 @@ const char* NCApplicationPrefPathEnv = "ncutil_prefpath";
       if ( fullLine && fullLineLen ) {
         int         argc = 0;
         char*       p = fullLine;
-        char*       start;
+        char*       start = NULL;
         char*       absEnd = fullLine + fullLineLen;
         char        c;
         char        quote = '\0';
