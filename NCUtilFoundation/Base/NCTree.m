@@ -99,7 +99,7 @@
     int   count = indent;
     
     while (count--) fputc(' ',stream);
-    fprintf(stream,"|-NCTree@%p(%u) { %p }\n",self,[self retainCount],_object);
+    fprintf(stream,"|-NCTree@%p(%lu) { %p }\n",self,(unsigned long)[self retainCount],_object);
     if (_child) [_child writeSummaryToStream:stream indent:indent + 2];
     if (_sibling) [_sibling writeSummaryToStream:stream indent:indent];
   }
@@ -168,7 +168,7 @@
   {
     //  Try deallocating a child, then a sibling, then our object, and finally
     //  just remove us from our parent:
-    fprintf(stddbg,"{\n  self = %p (%u)\n",self,[self retainCount]);
+    fprintf(stddbg,"{\n  self = %p (%lu)\n",self,(unsigned long)[self retainCount]);
     if (_child) {
       fprintf(stddbg,"  dealloc child %p\n",_child);
       [_child release]; _child = nil;

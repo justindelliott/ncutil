@@ -302,7 +302,7 @@
 
   - (void) summarizeToStream:(FILE*)stream
   {
-    fprintf(stream,"NCPort[%u] { mtu: %ld \n",[self retainCount],maxTransmitUnitSize);
+    fprintf(stream,"NCPort[%lu] { mtu: %ld \n",(unsigned long)[self retainCount],maxTransmitUnitSize);
     if (portOptionsDictionary) {
       CFIndex       i = 0,count = CFDictionaryGetCount(portOptionsDictionary);
       CFTypeRef*    keysAndVals = CFAllocatorAllocate(kCFAllocatorDefault,NCMaxMediaOptions + 2 * sizeof(CFStringRef) * count,0);
