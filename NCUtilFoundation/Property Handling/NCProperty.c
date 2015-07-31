@@ -965,7 +965,7 @@ void __NCPropertySummarize_NumberWithRange(FILE* stream,CFTypeRef supportData)
   
   if (range)
     CFNumberGetValue(range,kCFNumberSInt64Type,intRange);
-  fprintf(stream," [ %ld , %ld ]",intRange[0],intRange[1]);
+  fprintf(stream," [ %d , %d ]",(int)intRange[0],(int)intRange[1]);
 }
 
 //
