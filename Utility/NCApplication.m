@@ -1149,7 +1149,7 @@ const char* NCApplicationPrefPathEnv = "ncutil_prefpath";
         prompt = CFStringCreateWithFormat(
                         kCFAllocatorDefault,
                         NULL,
-                        CFSTR("[%d %@]$ "),
+                        CFSTR("[%ld %@]$ "),
                         [_currentDirectory directoryID],
                         [_currentDirectory directoryName]
                     );
