@@ -159,7 +159,7 @@ CFStringRef NCRootDirectory_InterfacesDirName = NULL;
 #endif
 
         //  Create the new location directory now:
-        if (newDir = [[NCLocationDirectory alloc] initWithRootDirectory:self andNetworkSet:newSet]) {
+        if ((newDir = [[NCLocationDirectory alloc] initWithRootDirectory:self andNetworkSet:newSet])) {
           //[newDir setDirectoryName:name];
           [self appendChild:newDir];
           [newDir release];
@@ -192,15 +192,15 @@ CFStringRef NCRootDirectory_InterfacesDirName = NULL;
       CFStringRef             aStr;
       
       //  Current location name:
-      if (aStr = SCCurrentLocationName([pSess sessionReference]))
+      if ((aStr = SCCurrentLocationName([pSess sessionReference])))
         CFDictionaryAddValue(result,NCRootDirectory_LocName,aStr);
         
       //  Current computer name:
-      if (aStr = [pSess getValueOfProperty:kSCPropSystemComputerName atPath:CFSTR("/System/System")])
+      if ((aStr = [pSess getValueOfProperty:kSCPropSystemComputerName atPath:CFSTR("/System/System")]))
         CFDictionaryAddValue(result,NCRootDirectory_CompName,aStr);
       
       //  Current local hostname:
-      if (aStr = [pSess getValueOfProperty:kSCPropNetLocalHostName atPath:CFSTR("/System/Network/HostNames")])
+      if ((aStr = [pSess getValueOfProperty:kSCPropNetLocalHostName atPath:CFSTR("/System/Network/HostNames")]))
         CFDictionaryAddValue(result,NCRootDirectory_HostName,aStr);
     }
     return result;
@@ -215,19 +215,19 @@ CFStringRef NCRootDirectory_InterfacesDirName = NULL;
       CFStringRef             aStr;
       
       //  Current computer name:
-      if (aStr = CFDictionaryGetValue(propDict,NCRootDirectory_CompName))
+      if ((aStr = CFDictionaryGetValue(propDict,NCRootDirectory_CompName)))
         [pSess setValue:aStr ofProperty:kSCPropSystemComputerName atPath:CFSTR("/System/System")];
       else
         [pSess removeProperty:kSCPropSystemComputerName atPath:CFSTR("/System/System")];
       
       //  Current local hostname:
-      if (aStr = CFDictionaryGetValue(propDict,NCRootDirectory_HostName))
+      if ((aStr = CFDictionaryGetValue(propDict,NCRootDirectory_HostName)))
         [pSess setValue:aStr ofProperty:kSCPropNetLocalHostName atPath:CFSTR("/System/Network/HostNames")];
       else
         [pSess removeProperty:kSCPropNetLocalHostName atPath:CFSTR("/System/Network/HostNames")];
       
       //  Current location name:
-      if (aStr = CFDictionaryGetValue(propDict,NCRootDirectory_LocName)) {
+      if ((aStr = CFDictionaryGetValue(propDict,NCRootDirectory_LocName))) {
         //  We just ask the location itself -- if it exists -- to become the
         //  current:
         NCLocationDirectory*  theLoc = [self locationWithName:aStr];

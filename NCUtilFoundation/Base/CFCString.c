@@ -68,9 +68,9 @@ CFCStringCreate(
     //  If we can get a CStringPtr for the string, construct
     //  the CFCString to just point to that:
     if (cStrPtr) {
-      if (newString = __CFCStringAlloc(allocator,0))
+      if ((newString = __CFCStringAlloc(allocator,0)))
         newString->cString = cStrPtr;
-    } else if (newString = __CFCStringAlloc(allocator,length)) {
+    } else if ((newString = __CFCStringAlloc(allocator,length))) {
       CFStringGetBytes(
           string,
           CFRangeMake(0,length),
@@ -104,7 +104,7 @@ CFCStringCreateWithCString(
     if (length == 0)
       return (CFCStringRef)__CFCStringNullString();
     
-    if (newString = __CFCStringAlloc(allocator,length))
+    if ((newString = __CFCStringAlloc(allocator,length)))
       strcpy(newString->cString,cString);
   }
   return (CFCStringRef)newString;
@@ -127,7 +127,7 @@ CFCStringCreateWithCStringNoCopy(
     if (length == 0)
       return (CFCStringRef)__CFCStringNullString();
     
-    if (newString = __CFCStringAlloc(allocator,0))
+    if ((newString = __CFCStringAlloc(allocator,0)))
       newString->cString = (char*)cString;
   }
   return (CFCStringRef)newString;

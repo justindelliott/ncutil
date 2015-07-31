@@ -288,13 +288,13 @@ __NCServiceProtocolSearch(
       SCNetworkInterfaceRef   newLayer;
       
       // Try to create the new layer:
-      if (newLayer = SCNetworkInterfaceCreateWithInterface([topNode networkInterface],type)) {
+      if ((newLayer = SCNetworkInterfaceCreateWithInterface([topNode networkInterface],type))) {
         //  Pop the top-level interface object out of the tree and release it:
         [topNode removeFromParent];
         [topNode release];
         
         //  Create the new node:
-        if (topNode = [NCInterfaceNode interfaceNodeWithRootDirectory:(NCRootDirectory*)[self root] andNetworkInterface:newLayer]) {
+        if ((topNode = [NCInterfaceNode interfaceNodeWithRootDirectory:(NCRootDirectory*)[self root] andNetworkInterface:newLayer])) {
           [self prependChild:topNode];
           result = YES;
         }
@@ -336,7 +336,7 @@ __NCServiceProtocolSearch(
       CFStringRef             aStr;
       
       //  Name of the service:
-      if (aStr = SCNetworkServiceGetName(_networkService))
+      if ((aStr = SCNetworkServiceGetName(_networkService)))
         CFDictionaryAddValue(result,kSCPropUserDefinedName,aStr);
       
       //  Enabled/disabled:
@@ -356,12 +356,12 @@ __NCServiceProtocolSearch(
       Boolean                 active;
       
       //  Name of the service:
-      if (aStr = CFDictionaryGetValue(propDict,kSCPropUserDefinedName))
+      if ((aStr = CFDictionaryGetValue(propDict,kSCPropUserDefinedName)))
         SCNetworkServiceSetName(_networkService,aStr);
       
       //  Enabled/disabled:
       active = SCNetworkServiceGetEnabled(_networkService);
-      if (aNum = CFDictionaryGetValue(propDict,kSCResvInactive)) {
+      if ((aNum = CFDictionaryGetValue(propDict,kSCResvInactive))) {
         if (active != (!CFNumberToBoolean(aNum)))
           SCNetworkServiceSetEnabled(_networkService,!active);
       } else if (!active)
@@ -413,7 +413,7 @@ __NCServiceProtocolSearch(
       
       if (oldName)
         oldName = CFRetain(oldName);
-      if (result = [super setValue:value ofProperty:property]) {
+      if ((result = [super setValue:value ofProperty:property])) {
         //  Are they not the same?
         if (!oldName || (oldName && CFStringCompare(oldName,value,0) != kCFCompareEqualTo))
           [(NCDirectoryNode*)[self parent] invalidatePropertyHandler];

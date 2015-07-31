@@ -220,7 +220,7 @@ __NCApplicationReadlineAndHistoryStart()
   if ( userHome ) {
     size_t      len = strlen(userHome) + strlen(NCApplicationHistoryFile) + 2;
     
-    if ( NCApplicationHistoryPath = malloc(len) ) {
+    if ( (NCApplicationHistoryPath = malloc(len)) ) {
       snprintf(NCApplicationHistoryPath,len,"%s/%s",userHome,NCApplicationHistoryFile);
       read_history(NCApplicationHistoryPath);
     }
@@ -1240,12 +1240,12 @@ const char* NCApplicationPrefPathEnv = "ncutil_prefpath";
       
         //  Next order of business, separate the line into it's constituent
         //  pieces:
-        while (c = *p) {
+        while ((c = *p)) {
           //  If it was an escape character (\) then we move ahead one to
           //  the explicit character:
           if (c == '\\') {
             p++;
-            if (c = *p)
+            if ((c = *p))
               escaped = YES;
             else
               break;

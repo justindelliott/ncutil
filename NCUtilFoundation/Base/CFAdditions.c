@@ -75,8 +75,8 @@
     if (uname) {
       struct passwd* userrec;
       
-      if (cname = CFCStringCreate(alloc,uname)) {
-        if (userrec = getpwnam(CFCStringGetCStringPtr(cname)))
+      if ((cname = CFCStringCreate(alloc,uname))) {
+        if ((userrec = getpwnam(CFCStringGetCStringPtr(cname))))
           result = CFStringCreateWithCString(alloc,userrec->pw_dir,kCFStringEncodingASCII);
         CFCStringDealloc(cname);
       }
@@ -103,7 +103,7 @@
       if (length == 1) {
         result = CFHomeDirectory(alloc);
       } else if (CFStringGetCharacterAtIndex(path,1) == '/') {
-        if (result = CFHomeDirectory(alloc)) {
+        if ((result = CFHomeDirectory(alloc))) {
           if (length > 2) {
             CFStringRef   sub = CFStringCreateWithSubstring(alloc,path,CFRangeMake(2,length - 2));
             CFStringRef   whole;
@@ -119,8 +119,8 @@
         CFStringRef   uname;
         while ((slash < length) && (CFStringGetCharacterAtIndex(path,slash) != '/'))
           slash++;
-        if (uname = CFStringCreateWithSubstring(alloc,path,CFRangeMake(1,slash - 1))) {
-          if (result = CFHomeDirectoryForUser(alloc,uname)) {
+        if ((uname = CFStringCreateWithSubstring(alloc,path,CFRangeMake(1,slash - 1)))) {
+          if ((result = CFHomeDirectoryForUser(alloc,uname))) {
             if (++slash < length) {
               //  Append the rest of the path:
               CFStringRef   sub = CFStringCreateWithSubstring(alloc,path,CFRangeMake(slash,length - slash));

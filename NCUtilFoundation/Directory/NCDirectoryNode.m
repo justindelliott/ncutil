@@ -149,7 +149,7 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
       //  Insert my name:
       CFStringInsert(aPath,0,[target directoryName]);
       
-      if (target = (NCDirectoryNode*)[target parent])
+      if ((target = (NCDirectoryNode*)[target parent]))
         //  Insert the separator string:
         CFStringInsert(aPath,0,sepStr);
     }
@@ -651,7 +651,7 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
       NCPropertyEnumerator*   pEnum = [pHandler propertyEnumerator];
       NCPropertyRef           property;
       
-      while ( property = [pEnum nextProperty] ) {
+      while ( (property = [pEnum nextProperty]) ) {
         CFPropertyListRef     value = [self valueOfProperty:NCPropertyGetSCName(property)];
         
         if (value)
@@ -857,13 +857,13 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
     
     //  Search through any children:
     if (goDeep) {
-      if (node = (NCDirectoryNode*)[self child])
+      if ((node = (NCDirectoryNode*)[self child]))
         node = [node searchDeep:goDeep forNodeWithDirectoryID:dirID andClass:aClass];
     }
     
     //  Search from a sibling:
     if (!node) {
-      if (node = (NCDirectoryNode*)[self sibling])
+      if ((node = (NCDirectoryNode*)[self sibling]))
         return [node searchDeep:goDeep forNodeWithDirectoryID:dirID andClass:aClass];
     }
     
@@ -904,13 +904,13 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
     
     //  Search through any children:
     if (goDeep) {
-      if (node = (NCDirectoryNode*)[self child])
+      if ((node = (NCDirectoryNode*)[self child]))
         node = [node searchDeep:goDeep forNodeWithDirectoryName:dirName andClass:aClass];
     }
         
     //  Search from a sibling:
     if (!node) {
-      if (node = (NCDirectoryNode*)[self sibling])
+      if ((node = (NCDirectoryNode*)[self sibling]))
         return [node searchDeep:goDeep forNodeWithDirectoryName:dirName andClass:aClass];
     }
     
@@ -941,13 +941,13 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
     
     //  Search through any children:
     if (goDeep) {
-      if (node = (NCDirectoryNode*)[self child])
+      if ((node = (NCDirectoryNode*)[self child]))
         node = [node searchDeepForModifiedNode:goDeep withClass:aClass];
     }
         
     //  Search from a sibling:
     if (!node) {
-      if (node = (NCDirectoryNode*)[self sibling])
+      if ((node = (NCDirectoryNode*)[self sibling]))
         node = [node searchDeepForModifiedNode:goDeep withClass:aClass];
     }
     
@@ -972,13 +972,13 @@ CFStringRef kSCPropBSDDevice = CFSTR("bsd-device");
     
     //  Search through any children:
     if (goDeep) {
-      if (node = (NCDirectoryNode*)[self child])
+      if ((node = (NCDirectoryNode*)[self child]))
         node = [node searchDeep:goDeep forNodeWithClass:aClass];
     }
         
     //  Search from a sibling:
     if (!node) {
-      if (node = (NCDirectoryNode*)[self sibling])
+      if ((node = (NCDirectoryNode*)[self sibling]))
         node = [node searchDeep:goDeep forNodeWithClass:aClass];
     }
     

@@ -133,7 +133,7 @@
     [self setValue:CFOne() ofProperty:kSCPropNetPPPCommRedialEnabled];
     [self setValue:CFOne() ofProperty:kSCPropNetPPPCommRedialCount];
     value = 5;
-    if (number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+    if ((number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
       [self setValue:number ofProperty:kSCPropNetPPPCommRedialInterval];
       CFRelease(number);
     }
@@ -143,7 +143,7 @@
     
     [self setValue:CFZero() ofProperty:kSCPropNetPPPDisconnectOnIdle];
     value = 1800;
-    if (number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+    if ((number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
       [self setValue:number ofProperty:kSCPropNetPPPDisconnectOnIdleTimer];
       CFRelease(number);
     }
@@ -153,7 +153,7 @@
     
     [self setValue:CFZero() ofProperty:kSCPropNetPPPIdleReminder];
     value = 1800;
-    if (number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+    if ((number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
       [self setValue:number ofProperty:kSCPropNetPPPIdleReminderTimer];
       CFRelease(number);
     }
@@ -162,12 +162,12 @@
     [self setValue:CFOne() ofProperty:kSCPropNetPPPLCPEchoEnabled];
     
     value = 4;
-    if (number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+    if ((number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
       [self setValue:number ofProperty:kSCPropNetPPPLCPEchoFailure];
       CFRelease(number);
     }
     value = 10;
-    if (number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+    if ((number = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
       [self setValue:number ofProperty:kSCPropNetPPPLCPEchoInterval];
       CFRelease(number);
     }

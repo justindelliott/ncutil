@@ -35,7 +35,7 @@ SCPathCreateFromComponents(
           CFStringAppendFormat(result,NULL,CFSTR("/%@"),str);
         else
           CFStringAppendFormat(result,NULL,CFSTR("%@"),str);
-      } while (str = va_arg(args,CFTypeRef));
+      } while ((str = va_arg(args,CFTypeRef)));
       va_end(args);
     }
   }

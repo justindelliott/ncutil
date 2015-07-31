@@ -430,7 +430,7 @@
         CFDictionaryRef   item = CFDictionaryGetValue(mediumTypesFromIOKit,keys[count]);
         CFNumberRef       num;
         
-        if (num = CFDictionaryGetValue(item,CFSTR(kIOMediumType))) {
+        if ((num = CFDictionaryGetValue(item,CFSTR(kIOMediumType)))) {
           CFIndex         medium;
           
           if (CFNumberGetValue(num,kCFNumberCFIndexType,&medium)) {
@@ -438,7 +438,7 @@
             CFMutableSetRef     mediaSet = NULL;
             
             //  Try to get a medium sub-type descriptor:
-            if (mediaKey = NCMediaDescriptor_CFStringForSubType(medium)) {
+            if ((mediaKey = NCMediaDescriptor_CFStringForSubType(medium))) {
             
               //  If no portOptionsDictionary exists, then we simply
               //  create a new one and this whole cycle goes from

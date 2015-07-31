@@ -310,7 +310,7 @@ __NCReplaceFormatToken(
     //  Create the ANSI sequence:
     CFStringRef     replacement;
     
-    if (replacement = CFStringCreateWithFormat(kCFAllocatorDefault,NULL,CFSTR("\033[%dm"),code)) {
+    if ((replacement = CFStringCreateWithFormat(kCFAllocatorDefault,NULL,CFSTR("\033[%dm"),code))) {
       CFStringReplace(string,cmpRange,replacement);
       CFRelease(replacement);
     } else

@@ -107,7 +107,7 @@ struct NCInterfaceSubClass {
       _networkInterface = CFRetain(theInterface);
       
       //  Do we have a sub-interface that we're layered on top of?
-      if (theInterface = SCNetworkInterfaceGetInterface(theInterface)) {
+      if ((theInterface = SCNetworkInterfaceGetInterface(theInterface))) {
         NCInterfaceNode*    newNode = [NCInterfaceNode interfaceNodeWithRootDirectory:root andNetworkInterface:theInterface];
         
         if (newNode)
@@ -127,7 +127,7 @@ struct NCInterfaceSubClass {
       [self setIsLocked:YES];
       
       //  Do we have a sub-interface that we're layered on top of?
-      if (theInterface = SCNetworkInterfaceGetInterface(theInterface)) {
+      if ((theInterface = SCNetworkInterfaceGetInterface(theInterface))) {
         NCInterfaceNode*    newNode = [NCInterfaceNode templateInterfaceNodeWithRootDirectory:root andNetworkInterface:theInterface];
         
         if (newNode) {

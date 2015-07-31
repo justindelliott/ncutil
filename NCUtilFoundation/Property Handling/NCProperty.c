@@ -131,13 +131,13 @@ NCCreatePasswordFromHexString(
   //  Remove leading whitespace:
   while (*p1 && isspace(*p1)) p1++;
   //  See if we have a leading '0x' sequence to dump:
-  if (p2 = strcasestr(p1,"0x"))
+  if ((p2 = strcasestr(p1,"0x")))
     p1 = p2 + 2;
   //  Finally, calculate the remaining length:
   length -= (p1 - hexstring);
   
   //  How many bytes would that be?
-  if (byteCount = (length / 2) + (length % 2)) {
+  if ((byteCount = (length / 2) + (length % 2))) {
     UInt8       bytes[byteCount];
   
     //  If we had an odd length then the first digit is
@@ -271,7 +271,7 @@ NCCreateDNSSortListAddress(
   char*         nmPart = dnsSortList;
   CFStringRef   result = NULL;
   
-  if (ipPart = strsep(&nmPart,"/")) {
+  if ((ipPart = strsep(&nmPart,"/"))) {
     if (ipPart && ipPart != nmPart) {
       int           ipType,nmType;
       CFStringRef   ipAddr = NCCreateIPAddress(ipPart,&ipType);
@@ -482,7 +482,7 @@ CFPropertyListRef __NCPropertyParse_IP4Array(char* argv[],CFIndex* argi,CFIndex 
   
   //  Create all the strings:
   while (i < argn) {
-    if (strings[j] = NCCreateIP4Address(*argv))
+    if ((strings[j] = NCCreateIP4Address(*argv)))
       j++;
     i++;
     argv++;
@@ -509,7 +509,7 @@ CFPropertyListRef __NCPropertyParse_IP6Array(char* argv[],CFIndex* argi,CFIndex 
   
   //  Create all the strings:
   while (i < argn) {
-    if (strings[j] = NCCreateIP6Address(*argv))
+    if ((strings[j] = NCCreateIP6Address(*argv)))
       j++;
     i++;
     argv++;
@@ -539,7 +539,7 @@ CFPropertyListRef __NCPropertyParse_NumberArray(char* argv[],CFIndex* argi,CFInd
     CFIndex     value;
     
     if (sscanf(*argv,"%ld",&value) == 1)
-      if (numbers[j] = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))
+      if ((numbers[j] = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)))
         j++;
     i++;
     argv++;
@@ -569,7 +569,7 @@ CFPropertyListRef __NCPropertyParse_UniqueNumberArray(char* argv[],CFIndex* argi
     CFIndex     value;
     
     if (sscanf(*argv,"%ld",&value) == 1) {
-      if (numbers[j] = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value)) {
+      if ((numbers[j] = CFNumberCreate(kCFAllocatorDefault,kCFNumberCFIndexType,&value))) {
         CFIndex     k = j;
         
         //  Make sure we don't have one already:
@@ -620,7 +620,7 @@ CFPropertyListRef __NCPropertyParse_StringEnumArray(char* argv[],CFIndex* argi,C
   
   //  Create all the numbers:
   while (i < argn) {
-    if (strings[j] = NCCreateStringEnumValue(supportData,*argv)) {
+    if ((strings[j] = NCCreateStringEnumValue(supportData,*argv))) {
       CFIndex     k = j;
       
       //  Make sure we don't have one already:
@@ -661,7 +661,7 @@ CFPropertyListRef __NCPropertyParse_DNSSortList(char* argv[],CFIndex* argi,CFInd
   
   //  Create all the numbers:
   while (i < argn) {
-    if (strings[j] = NCCreateDNSSortListAddress(*argv)) {
+    if ((strings[j] = NCCreateDNSSortListAddress(*argv))) {
       CFIndex     k = j;
       
       //  Make sure we don't have one already:

@@ -431,11 +431,11 @@ static CFStringRef NCLocationDirectory_ServiceOrder = NULL;
       CFArrayRef              anArray;
       
       //  Name of the location:
-      if (aStr = SCNetworkSetGetName(_networkSet))
+      if ((aStr = SCNetworkSetGetName(_networkSet)))
         CFDictionaryAddValue(result,kSCPropUserDefinedName,aStr);
       
       //  Service order:
-      if (anArray = [self serviceOrderByName]) {
+      if ((anArray = [self serviceOrderByName])) {
         CFMutableArrayRef   srvcCopy = CFArrayCreateMutableCopy(
                                           kCFAllocatorDefault,
                                           CFArrayGetCount(anArray),
@@ -459,11 +459,11 @@ static CFStringRef NCLocationDirectory_ServiceOrder = NULL;
       CFArrayRef              anArray;
       
       //  Name of the location:
-      if (aStr = CFDictionaryGetValue(propDict,kSCPropUserDefinedName))
+      if ((aStr = CFDictionaryGetValue(propDict,kSCPropUserDefinedName)))
         SCNetworkSetSetName(_networkSet,aStr);
       
       //  Service order:
-      if (anArray = CFDictionaryGetValue(propDict,kSCPropNetServiceOrder)) {
+      if ((anArray = CFDictionaryGetValue(propDict,kSCPropNetServiceOrder))) {
         CFMutableArrayRef   byID = [self serviceOrderByIDForNames:anArray];
         
         if (byID) {

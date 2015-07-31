@@ -312,7 +312,7 @@
         NCTree*   curChild = _child;
         NCTree*   nextChild;
         
-        while (nextChild = [curChild sibling])
+        while ((nextChild = [curChild sibling]))
           curChild = nextChild;
         [curChild setSibling:child];
       } else

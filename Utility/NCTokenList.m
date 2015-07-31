@@ -163,7 +163,7 @@ struct NCToken {
             p++;
         }
         
-        if ( newObject = NCAllocateObject(self,bytes) )
+        if ( (newObject = NCAllocateObject(self,bytes)) )
             [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
     }
     return newObject;
