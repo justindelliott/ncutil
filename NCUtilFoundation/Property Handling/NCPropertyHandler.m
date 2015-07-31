@@ -81,7 +81,7 @@
     //  are too large, so we'll just do a bubble sort:
     count = _propertyCount;
     while (count--) {
-      unsigned int  altCount = count;
+      unsigned int  altCount = (UInt)count;
       
       dst = _propertyList;
       while (altCount--) {
@@ -111,7 +111,7 @@ __NCPropCmp(
   + (NCPropertyHandler*) propertyHandlerWithProperties:(NCPropertyRef*)propList
     count:(CFIndex)count;
   {
-    unsigned int        extraBytes = sizeof(NCPropertyRef) * count;
+    unsigned int        extraBytes = sizeof(NCPropertyRef) * (UInt)count;
     NCPropertyHandler*  result = NCAllocateObject(self,extraBytes);
     
     if (result)

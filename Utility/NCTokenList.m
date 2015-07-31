@@ -97,12 +97,12 @@ struct NCToken {
     i = 1;
     while ( i < _tokenCount ) {
       struct NCToken    tmpToken = ((struct NCToken*)_tokenTable)[i];
-      int               cmpLenI = tmpToken.textlen;
+      int               cmpLenI = (int)tmpToken.textlen;
       const char*       textI = tmpToken.text;
       
       j = i;
       while ( j > 0 ) {
-        int   cmpLenJ = ((struct NCToken*)_tokenTable)[j - 1].textlen;
+        int   cmpLenJ = (int)((struct NCToken*)_tokenTable)[j - 1].textlen;
         int   result = strncmp(((struct NCToken*)_tokenTable)[j - 1].text,textI,(cmpLenJ < cmpLenI ? cmpLenJ : cmpLenI));
         
         if ( (result > 0) || ( (result == 0) && (cmpLenJ > cmpLenI) ) ) {
@@ -163,7 +163,7 @@ struct NCToken {
             p++;
         }
         
-        if ( (newObject = NCAllocateObject(self,bytes)) )
+        if ( (newObject = NCAllocateObject(self,(UInt)bytes)) )
             [newObject initWithStrings:(char**)strings tokens:(int*)tokens count:count];
     }
     return newObject;
@@ -194,7 +194,7 @@ struct NCToken {
       int       comparison = strncmp(((struct NCToken*)_tokenTable)[current].text,text,len);
       
       if ( comparison == 0 ) {
-        int     nextPos = *start + ((struct NCToken*)_tokenTable)[current].textlen;
+        int     nextPos = *start + (int)((struct NCToken*)_tokenTable)[current].textlen;
         
         if ( isspace(text[nextPos]) || (text[nextPos] == '\0') ) {
           *start = nextPos;

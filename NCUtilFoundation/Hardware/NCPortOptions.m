@@ -438,7 +438,7 @@
             CFMutableSetRef     mediaSet = NULL;
             
             //  Try to get a medium sub-type descriptor:
-            if ((mediaKey = NCMediaDescriptor_CFStringForSubType(medium))) {
+            if ((mediaKey = NCMediaDescriptor_CFStringForSubType((UInt)medium))) {
             
               //  If no portOptionsDictionary exists, then we simply
               //  create a new one and this whole cycle goes from
@@ -456,10 +456,10 @@
               }
               
               //  Set common options:
-              mediaSet = NCMediaDescriptor_CFStringsForCommonOptions(medium,mediaSet);
+              mediaSet = NCMediaDescriptor_CFStringsForCommonOptions((UInt)medium,mediaSet);
               
               //  Set media-specific options:
-              mediaSet = NCMediaDescriptor_CFStringsForMediaSpecificOptions(medium,mediaSet);
+              mediaSet = NCMediaDescriptor_CFStringsForMediaSpecificOptions((UInt)medium,mediaSet);
               
               //  If we came through with NULL, then set the mediaKey
               //  to kCFNull; otherwise, drop the set into the dictionary:

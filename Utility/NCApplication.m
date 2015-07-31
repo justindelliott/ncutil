@@ -368,7 +368,7 @@ const char* NCApplicationPrefPathEnv = "ncutil_prefpath";
   {
     int     start = 0;
     
-    return [__NCApplicationCommandMapper tokenForText:cString start:&start length:strlen(cString)];
+    return [__NCApplicationCommandMapper tokenForText:cString start:&start length:(int)strlen(cString)];
   }
 
 //

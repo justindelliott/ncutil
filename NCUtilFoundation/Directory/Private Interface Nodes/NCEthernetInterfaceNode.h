@@ -104,7 +104,7 @@
           //  A bit of tom-foolery:  we can fit TWO 32-bit integers into the 64-bit
           //  type, so as long as we work with it that way we should be fine.  Though
           //  I'd like to see a CFRange object in the future...
-          SInt32          intRange[2] = { 72 , mtu };
+          SInt32          intRange[2] = { 72 , (int)mtu };
           CFNumberRef     range = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt64Type,(SInt64*)intRange);
           
           PROPERTY_DECL(6,kNCPropertyTypeNumberWithRange,CFSTR("mtu"),kSCPropNetEthernetMTU,FALSE,range)
