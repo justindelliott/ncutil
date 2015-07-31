@@ -273,7 +273,7 @@ NCCreateDNSSortListAddress(
   
   if ((ipPart = strsep(&nmPart,"/"))) {
     if (ipPart && ipPart != nmPart) {
-      int           ipType,nmType;
+      int           ipType,nmType = 0;
       CFStringRef   ipAddr = NCCreateIPAddress(ipPart,&ipType);
       CFStringRef   nmAddr = NULL;
       
